@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class FileRead {
     File file;
@@ -31,5 +33,24 @@ public class FileRead {
 
     public int getDocID() {
         return docID;
+    }
+
+    public void goThroughFile(){
+        try {
+            Scanner fileScan = new Scanner(file);
+            String line = fileScan.next();
+            line = line.toLowerCase();
+            while (fileScan.hasNext()){
+                if (Main.invertedIndex.containsKey(line)){
+                    Main.invertedIndex.get(line).add(docID);
+                } else {
+                    Set<Integer> set = new HashSet<>();
+                    set.add(docID);
+                    Main.invertedIndex.put(line, set);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
