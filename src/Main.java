@@ -12,7 +12,6 @@ public class Main {
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
             for (File child : directoryListing) {
-                System.out.println(child.getName());
                 if (child.length() != 0) {
                     FileRead fr = new FileRead(child);
                     fr.goThroughFile();
@@ -20,7 +19,6 @@ public class Main {
             }
         }
 
-        System.out.println(Main.invertedIndex);
         System.out.println("Enter word to search");
         Scanner input = new Scanner(System.in);
         String keyWord = input.next();
