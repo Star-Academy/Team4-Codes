@@ -8,8 +8,8 @@ public class FileRead {
     File file;
     int docID;
     static int idCounter = 0;
-    public FileRead(String path){
-        file = new File(path);
+    public FileRead(File file){
+        this.file = file;
         idCounter ++;
         docID = idCounter;
     }
