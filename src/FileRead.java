@@ -48,6 +48,8 @@ public class FileRead {
                     set.add(docID);
                     Main.invertedIndex.put(line, set);
                 }
+                line = fileScan.next();
+                line = line.toLowerCase();
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
