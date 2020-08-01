@@ -12,9 +12,11 @@ public class Main {
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
             for (File child : directoryListing) {
-                FileRead fr = new FileRead(child);
-
-                fr.goThroughFile();
+                System.out.println(child.getName());
+                if (child.length() != 0) {
+                    FileRead fr = new FileRead(child);
+                    fr.goThroughFile();
+                }
             }
         }
 
