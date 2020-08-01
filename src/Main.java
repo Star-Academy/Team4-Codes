@@ -18,10 +18,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main.allFiles.add(new FileRead("C:\\invertedIndex\\temp.txt"));
-        Main.allFiles.add(new FileRead("C:\\invertedIndex\\temp.txt"));
-        Main.allFiles.add(new FileRead("C:\\invertedIndex\\phonenumbers.txt"));
-        Main.allFiles.add(new FileRead("C:\\invertedIndex\\phonenumbers.txt"));
+        Main.allFiles.add(new FileRead("C:\\invertedIndex\\57110"));
+        Main.allFiles.add(new FileRead("C:\\invertedIndex\\58043"));
+        Main.allFiles.add(new FileRead("C:\\invertedIndex\\58044"));
+        Main.allFiles.add(new FileRead("C:\\invertedIndex\\58045"));
 
         System.out.println("Enter word to search");
         Scanner input = new Scanner(System.in);
