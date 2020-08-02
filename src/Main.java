@@ -20,11 +20,33 @@ public class Main {
         }
 
         System.out.println("Enter word to search");
-        Scanner input = new Scanner(System.in);
-        String keyWord = input.next();
-        keyWord = keyWord.toLowerCase();
-        if (invertedIndex.containsKey(keyWord)) {
-            for (Integer a : invertedIndex.get(keyWord)) {
+        Scanner sc = new Scanner(System.in);
+        String keyLine = sc.next();
+        keyLine = keyLine.toLowerCase();
+        String[] keyWords = keyLine.split(" ");
+        ArrayList<String> shouldBe = new ArrayList<String>();
+        ArrayList<String> mustBe = new ArrayList<String>();
+        ArrayList<String> mustNotToBe = new ArrayList<String>();
+        for(String keyword : keyWords){
+            if(keyword.startsWith("+"))
+                shouldBe.add(keyword);
+            else if(keyword.startsWith("-"))
+                mustNotToBe.add(keyword);
+            else
+                mustBe.add(keyword);
+        }
+        Set<Integer> output = new HashSet<Integer>();
+        for(String keyword : shouldBe){
+            output.addAll(invertedIndex.get(keyword));
+        }
+        for(String keyword : mustBe){
+            output.retainAll(invertedIndex.get(keyword));
+        }
+        for(String keyword : mustNotToBe){
+            output.removeAll(invertedIndex.get(keyword));
+        }
+        if (output.size()!=0) {
+            for (Integer a : output) {
                 System.out.print(a + " ");
             }
         }
