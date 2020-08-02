@@ -39,22 +39,21 @@ public class Main {
             }
         }
         Set<String> output = new HashSet<String>();
-        for (String keyword : shouldBe) {
-            if (invertedIndex.containsKey(keyword)) {
-                output.addAll(invertedIndex.get(keyword).getToken());
-            }
-        }
         int i = 0;
         for (String keyword : mustBe) {
-
             if (invertedIndex.containsKey(keyword)) {
                 if (i == 0) {
                     output.addAll(invertedIndex.get(keyword).getToken());
                 } else {
                     output.retainAll(invertedIndex.get(keyword).getToken());
                 }
+                i++;
             }
-            i++;
+        }
+        for (String keyword : shouldBe) {
+            if (invertedIndex.containsKey(keyword)) {
+                output.addAll(invertedIndex.get(keyword).getToken());
+            }
         }
         for (String keyword : mustNotToBe) {
             if (invertedIndex.containsKey(keyword)) {
