@@ -6,33 +6,10 @@ import java.util.Set;
 
 public class FileRead {
     File file;
-    int docID;
-    static int idCounter = 0;
+    String docID;
     public FileRead(File file){
         this.file = file;
-        idCounter ++;
-        docID = idCounter;
-    }
-    public boolean containsWord(String word){
-        try {
-            Scanner fileScan = new Scanner(file);
-            String line = fileScan.next();
-            line = line.toLowerCase();
-            while (fileScan.hasNext()){
-                if (line.equals(word))
-                    return true;
-                line = fileScan.next();
-                line = line.toLowerCase();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return false;
-    }
-
-    public int getDocID() {
-        return docID;
+        docID = this.file.getName();
     }
 
     public void goThroughFile(){
@@ -42,11 +19,12 @@ public class FileRead {
             line = line.toLowerCase();
             while (fileScan.hasNext()){
                 if (Main.invertedIndex.containsKey(line)){
-                    Main.invertedIndex.get(line).add(docID);
+                    Main.invertedIndex.get(line).addNewDoc(docID);
                 } else {
-                    Set<Integer> set = new HashSet<>();
+                    Set<String> set = new HashSet<>();
                     set.add(docID);
-                    Main.invertedIndex.put(line, set);
+                    InvertedIndex tokens = new InvertedIndex(set);
+                    Main.invertedIndex.put(line, tokens);
                 }
                 line = fileScan.next();
                 line = line.toLowerCase();
