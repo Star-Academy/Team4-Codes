@@ -18,13 +18,12 @@ public class FileRead {
             String line = fileScan.next();
             line = line.toLowerCase();
             while (fileScan.hasNext()){
-                if (Main.invertedIndex.containsKey(line)){
-                    Main.invertedIndex.get(line).addNewDoc(docID);
+                if (Main.allTokens.getTokens().containsKey(line)){
+                    Main.allTokens.getTokens().get(line).add(docID);
                 } else {
                     Set<String> set = new HashSet<>();
                     set.add(docID);
-                    InvertedIndex tokens = new InvertedIndex(set);
-                    Main.invertedIndex.put(line, tokens);
+                    Main.allTokens.getTokens().put(line,set);
                 }
                 line = fileScan.next();
                 line = line.toLowerCase();

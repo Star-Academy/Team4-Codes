@@ -1,16 +1,28 @@
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class InvertedIndex{
-    Set<String> token;
-    public InvertedIndex(Set<String> token){
-        this.token = token;
+    Map<String, Set<String>> tokens;
+    public InvertedIndex(){
+        tokens = new HashMap<>();
     }
 
-    public Set<String> getToken() {
-        return token;
+    public Map<String, Set<String>> getTokens() {
+        return tokens;
     }
 
-    public void addNewDoc(String docName){
-        token.add(docName);
+    public void fillMap(){
+        File dir = new File("C:\\EnglishData");
+        File[] directoryListing = dir.listFiles();
+        if (directoryListing != null) {
+            for (File child : directoryListing) {
+                if (child.length() != 0) {
+                    FileRead fr = new FileRead(child);
+                    fr.goThroughFile();
+                }
+            }
+        }
     }
 }

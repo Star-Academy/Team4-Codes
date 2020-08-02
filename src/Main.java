@@ -4,19 +4,12 @@ import java.util.*;
 public class Main {
     static Map<String, InvertedIndex> invertedIndex = new HashMap<>();
 
+    static InvertedIndex allTokens = new InvertedIndex();
 
     public static void main(String[] args) {
         //pre process
-        File dir = new File("C:\\EnglishData");
-        File[] directoryListing = dir.listFiles();
-        if (directoryListing != null) {
-            for (File child : directoryListing) {
-                if (child.length() != 0) {
-                    FileRead fr = new FileRead(child);
-                    fr.goThroughFile();
-                }
-            }
-        }
+
+        allTokens.fillMap();
 
         System.out.println("Enter word to search");
         Scanner sc = new Scanner(System.in);
@@ -41,23 +34,23 @@ public class Main {
         Set<String> output = new HashSet<String>();
         int i = 0;
         for (String keyword : mustBe) {
-            if (invertedIndex.containsKey(keyword)) {
+            if (allTokens.getTokens().containsKey(keyword)) {
                 if (i == 0) {
-                    output.addAll(invertedIndex.get(keyword).getToken());
+                    output.addAll(allTokens.getTokens().get(keyword));
                 } else {
-                    output.retainAll(invertedIndex.get(keyword).getToken());
+                    output.retainAll(allTokens.getTokens().get(keyword));
                 }
                 i++;
             }
         }
         for (String keyword : shouldBe) {
-            if (invertedIndex.containsKey(keyword)) {
-                output.addAll(invertedIndex.get(keyword).getToken());
+            if (allTokens.getTokens().containsKey(keyword)) {
+                output.addAll(allTokens.getTokens().get(keyword));
             }
         }
         for (String keyword : mustNotToBe) {
-            if (invertedIndex.containsKey(keyword)) {
-                output.removeAll(invertedIndex.get(keyword).getToken());
+            if (allTokens.getTokens().containsKey(keyword)) {
+                output.removeAll(allTokens.getTokens().get(keyword));
             }
         }
         if (output.size() != 0) {
