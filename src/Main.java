@@ -2,9 +2,8 @@ import java.io.File;
 import java.util.*;
 
 public class Main {
-    static Map<String, InvertedIndex> invertedIndex = new HashMap<>();
 
-    static InvertedIndex allTokens = new InvertedIndex();
+    public static InvertedIndex allTokens = new InvertedIndex();
 
     public static void main(String[] args) {
         //pre process
