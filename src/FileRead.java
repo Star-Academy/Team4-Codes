@@ -6,47 +6,24 @@ import java.util.Set;
 
 public class FileRead {
     File file;
-    int docID;
-    static int idCounter = 0;
+    String docID;
     public FileRead(File file){
         this.file = file;
-        idCounter ++;
-        docID = idCounter;
+        docID = this.file.getName();
     }
-    public boolean containsWord(String word){
+
+    public void goThroughFile(InvertedIndex allTokens){
         try {
             Scanner fileScan = new Scanner(file);
             String line = fileScan.next();
             line = line.toLowerCase();
             while (fileScan.hasNext()){
-                if (line.equals(word))
-                    return true;
-                line = fileScan.next();
-                line = line.toLowerCase();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return false;
-    }
-
-    public int getDocID() {
-        return docID;
-    }
-
-    public void goThroughFile(){
-        try {
-            Scanner fileScan = new Scanner(file);
-            String line = fileScan.next();
-            line = line.toLowerCase();
-            while (fileScan.hasNext()){
-                if (Main.invertedIndex.containsKey(line)){
-                    Main.invertedIndex.get(line).add(docID);
+                if (allTokens.getTokens().containsKey(line)){
+                    allTokens.getTokens().get(line).add(docID);
                 } else {
-                    Set<Integer> set = new HashSet<>();
+                    Set<String> set = new HashSet<>();
                     set.add(docID);
-                    Main.invertedIndex.put(line, set);
+                    allTokens.getTokens().put(line,set);
                 }
                 line = fileScan.next();
                 line = line.toLowerCase();
