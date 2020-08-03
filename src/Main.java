@@ -14,8 +14,8 @@ public class Main {
         keyLine = keyLine.toLowerCase();
         String[] keywords = keyLine.split(" ");
 
-        CalculateOutput co = new CalculateOutput(keywords);
-        Set<String> output = co.returnOutput(allTokens);
+        CalculateOutput co = new CalculateOutput();
+        Set<String> output = co.returnOutput(allTokens, keywords);
         if (output.size() != 0) {
             for (String a : output) {
                 System.out.print(a + " ");
