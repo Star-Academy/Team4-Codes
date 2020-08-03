@@ -28,13 +28,17 @@ public class CalculateOutput {
         }
     }
 
+    public boolean isContainKey (String keyword, InvertedIndex allTokens){
+        return allTokens.getTokens().containsKey(keyword);
+    } 
+
     public Set<String> returnOutput(InvertedIndex allTokens){
         
         processKeywords();
         
         boolean isFirstTime = true;
         for (String keyword : mustBe) {
-            if (allTokens.getTokens().containsKey(keyword)) {
+            if (isContainKey(keyword, allTokens)) {
                 if (isFirstTime) {
                     output.addAll(allTokens.getTokens().get(keyword));
                     isFirstTime = false;
@@ -44,12 +48,12 @@ public class CalculateOutput {
             }
         }
         for (String keyword : shouldBe) {
-            if (allTokens.getTokens().containsKey(keyword)) {
+            if (isContainKey(keyword, allTokens)) {
                 output.addAll(allTokens.getTokens().get(keyword));
             }
         }
         for (String keyword : mustNotToBe) {
-            if (allTokens.getTokens().containsKey(keyword)) {
+            if (isContainKey(keyword, allTokens)) {
                 output.removeAll(allTokens.getTokens().get(keyword));
             }
         }
