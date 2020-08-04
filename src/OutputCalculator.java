@@ -16,7 +16,7 @@ public class OutputCalculator {
     }
 
     //pre processing for calculating
-    public void processKeywords(String[] keywords){
+    private void processKeywords(String[] keywords){
         for (String keyword : keywords) {
             if (keyword.startsWith("+")) { //plus sign handled
                 keyword = keyword.substring(1);
@@ -31,7 +31,7 @@ public class OutputCalculator {
     }
 
     //check if toke's map contains the keyword
-    public boolean isContainKey (String keyword, InvertedIndex allTokens){
+    private boolean isContainKey (String keyword, InvertedIndex allTokens){
         return allTokens.getTokens().containsKey(keyword);
     } 
 
@@ -48,7 +48,7 @@ public class OutputCalculator {
         return output;
     }
 
-    public void noSignHandling(){
+    private void noSignHandling(){
         boolean isFirstTime = true;
         for (String keyword : mustBe) {
             if (isContainKey(keyword, allTokens)) {
@@ -61,14 +61,14 @@ public class OutputCalculator {
             }
         }
     }
-    public void plusSignHandling(){
+    private void plusSignHandling(){
         for (String keyword : shouldBe) {
             if (isContainKey(keyword, allTokens)) {
                 output.addAll(allTokens.getTokens().get(keyword)); //adding to output
             }
         }
     }
-    public void minusSignHandling(){
+    private void minusSignHandling(){
         for (String keyword : mustNotToBe) {
             if (isContainKey(keyword, allTokens)) {
                 output.removeAll(allTokens.getTokens().get(keyword)); //removing from output
