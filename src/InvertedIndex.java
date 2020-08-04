@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class InvertedIndex{
     Map<String, Set<String>> tokens; //our storing map
-    final static String dataSetPath = "C:\\EnglishData";
+    final static String dataSetPath = "C:\\Users\\farah\\Desktop\\vscws\\EnglishData";
     public InvertedIndex(){
         tokens = new HashMap<>();
     }
