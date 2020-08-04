@@ -17,7 +17,7 @@ public class FileReader {
         try {
             //scan file data
             Scanner fileScan = new Scanner(file);
-
+            
             while (fileScan.hasNext()){
                 String line = fileScan.next();
                 line = line.toLowerCase();    

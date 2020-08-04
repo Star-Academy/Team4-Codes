@@ -19,11 +19,9 @@ public class OutputCalculator {
     private void processKeywords(String[] keywords){
         for (String keyword : keywords) {
             if (keyword.startsWith("+")) { //plus sign handled
-                keyword = keyword.substring(1);
-                shouldBe.add(keyword);
+                shouldBe.add(keyword.substring(1));
             } else if (keyword.startsWith("-")) { //minus sign handled
-                keyword = keyword.substring(1);
-                mustNotToBe.add(keyword);
+                mustNotToBe.add(keyword.substring(1));
             } else { //no sign handled
                 mustBe.add(keyword);
             }
@@ -52,11 +50,11 @@ public class OutputCalculator {
         boolean isFirstTime = true;
         for (String keyword : mustBe) {
             if (isContainKey(keyword, allTokens)) {
-                if (isFirstTime) { //if it's firs time we just add it after that gonna retain it all
+                if (!isFirstTime) { //if it's firs time we just add it after that gonna retain it all
+                    output.retainAll(allTokens.getTokens().get(keyword)); //retaining
+                } else {
                     output.addAll(allTokens.getTokens().get(keyword));
                     isFirstTime = false;
-                } else {
-                    output.retainAll(allTokens.getTokens().get(keyword)); //retaining
                 }
             }
         }
