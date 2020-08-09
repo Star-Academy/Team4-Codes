@@ -12,10 +12,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.Assert.*;
-/*
+
 
 public class MainTest {
+    @Test
+    public void testMain(){
+        System.out.println("test MAIN");
+    }
 
+/*
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
@@ -56,8 +61,9 @@ public class MainTest {
         Mockito.when(userInputProcessor.inputFromUser()).thenReturn(new String[]{"hello", "-girl"});
         main.activityContent();
         assertSame(main.output(main.output), "6289 ");
-    }
+    }*/
 }
 
 
- */
+
+
