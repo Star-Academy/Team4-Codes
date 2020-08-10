@@ -38,27 +38,6 @@ public class MainTest {
         assertEquals(main.output(set), "no result found");
     }
 
-//    @Spy InvertedIndex invertedIndex = new InvertedIndex();
-//
-//
-//    @Test
-//    public void activityStart() {
-//        invertedIndex.getTokens().put("hello", new HashSet<>() {{
-//            add("5922");
-//            add("6289");
-//        }});
-//        invertedIndex.getTokens().put("girl", new HashSet<>(){{
-//            add("7231");
-//            add("5922");
-//        }});
-//
-//        main.allTokens = invertedIndex;
-//
-//        UserInputProcessor userInputProcessor = Mockito.mock(UserInputProcessor.class);
-//        Mockito.when(userInputProcessor.inputFromUser()).thenReturn(new String[]{"hello", "-girl"});
-//        main.activityContent();
-//        assertSame(main.output(main.output), "6289 ");
-//    }*/
 }
 
 

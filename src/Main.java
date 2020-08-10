@@ -29,8 +29,8 @@ public class Main {
     public void activityContent(){
         directoryReader.goInFolder();
         String[] keywords = userInputProcessor.inputFromUser();
-        OutputCalculator co = new OutputCalculator(invertedIndex);
-        output = co.returnOutput(keywords);
+        OutputCalculator oc = new OutputCalculator(invertedIndex);
+        output = oc.returnOutput(keywords);
         System.out.println(output(output));
     }
 
