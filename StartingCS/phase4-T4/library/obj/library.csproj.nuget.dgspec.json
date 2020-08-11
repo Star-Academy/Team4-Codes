@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj": {}
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj": {}
   },
   "projects": {
-    "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj": {
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj",
+        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj",
         "projectName": "library",
-        "projectPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj",
-        "packagesPath": "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\",
-        "outputPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\obj\\",
+        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj",
+        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Saba Ebrahimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
