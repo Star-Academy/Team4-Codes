@@ -102,19 +102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\": {}
+    "C:\\Users\\farah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\driver-program\\driver-program.csproj",
+      "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\driver-program\\driver-program.csproj",
       "projectName": "driver-program",
-      "projectPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\driver-program\\driver-program.csproj",
-      "packagesPath": "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\",
-      "outputPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\driver-program\\obj\\",
+      "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\driver-program\\driver-program.csproj",
+      "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\driver-program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Saba Ebrahimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -125,8 +125,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj": {
-              "projectPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj"
+            "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj": {
+              "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj"
             }
           }
         }
