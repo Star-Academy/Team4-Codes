@@ -1,0 +1,9 @@
+C:\Users\farah\Desktop\phase4-T4\library\bin\Debug\netstandard2.0\library.deps.json
+C:\Users\farah\Desktop\phase4-T4\library\bin\Debug\netstandard2.0\library.dll
+C:\Users\farah\Desktop\phase4-T4\library\bin\Debug\netstandard2.0\library.pdb
+C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.csprojAssemblyReference.cache
+C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.AssemblyInfoInputs.cache
+C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.AssemblyInfo.cs
+C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.csproj.CoreCompileInputs.cache
+C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.dll
+C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.pdb
