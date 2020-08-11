@@ -555,19 +555,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\farah\\.nuget\\packages\\": {}
+    "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj",
+      "projectUniqueName": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj",
       "projectName": "library",
-      "projectPath": "C:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj",
-      "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\farah\\Desktop\\phase4-T4\\library\\obj\\",
+      "projectPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\library.csproj",
+      "packagesPath": "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\",
+      "outputPath": "D:\\CodeStar\\Team4-Codes\\StartingCS\\phase4-T4\\library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Saba Ebrahimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"

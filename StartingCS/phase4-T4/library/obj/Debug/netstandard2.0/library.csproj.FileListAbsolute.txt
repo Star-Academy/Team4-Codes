@@ -7,3 +7,12 @@ C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.Assemb
 C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.csproj.CoreCompileInputs.cache
 C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.dll
 C:\Users\farah\Desktop\phase4-T4\library\obj\Debug\netstandard2.0\library.pdb
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\obj\Debug\netstandard2.0\library.csprojAssemblyReference.cache
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\obj\Debug\netstandard2.0\library.AssemblyInfoInputs.cache
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\obj\Debug\netstandard2.0\library.AssemblyInfo.cs
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\obj\Debug\netstandard2.0\library.csproj.CoreCompileInputs.cache
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\obj\Debug\netstandard2.0\library.dll
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\obj\Debug\netstandard2.0\library.pdb
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\bin\Debug\netstandard2.0\library.deps.json
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\bin\Debug\netstandard2.0\library.dll
+D:\CodeStar\Team4-Codes\StartingCS\phase4-T4\library\bin\Debug\netstandard2.0\library.pdb
