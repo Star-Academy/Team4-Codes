@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj": {}
+    "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj": {
+    "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
+        "projectUniqueName": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
         "projectName": "IOHandler",
-        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
-        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\obj\\",
+        "projectPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
+        "packagesPath": "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\",
+        "outputPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\IOHandler\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Saba Ebrahimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
