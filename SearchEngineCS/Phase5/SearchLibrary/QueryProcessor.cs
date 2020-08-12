@@ -5,17 +5,17 @@ namespace SearchLibrary
     public class QueryProcessor
     {
         IUserInput InputFromUser { get; set; }
-        public HashSet<string> OrWords { get; set; }
-        public HashSet<string> AndWords { get; set; }
-        public HashSet<string> RemoveWords { get; set; }
+        public IKeywordList OrWords { get; set; }
+        public IKeywordList AndWords { get; set; }
+        public IKeywordList RemoveWords { get; set; }
 
 
         public QueryProcessor(IUserInput userInput)
         {
             this.InputFromUser = userInput;
-            OrWords = new HashSet<string>();
-            AndWords = new HashSet<string>();
-            RemoveWords = new HashSet<string>();
+            OrWords = new PlusSignKeyword();
+            AndWords = new NoSignKeyword();
+            RemoveWords = new MinusSignKeyword();
         }
         public void Process()
         {
@@ -24,15 +24,15 @@ namespace SearchLibrary
             {
                 if (keyword.StartsWith("+"))
                 {
-                    OrWords.Add(keyword.Substring(1));
+                    OrWords.Content.Add(keyword.Substring(1));
                 }
                 else if (keyword.StartsWith("-"))
                 {
-                    RemoveWords.Add(keyword.Substring(1));
+                    RemoveWords.Content.Add(keyword.Substring(1));
                 }
                 else
                 {
-                    AndWords.Add(keyword);
+                    AndWords.Content.Add(keyword);
                 }
             }
         }

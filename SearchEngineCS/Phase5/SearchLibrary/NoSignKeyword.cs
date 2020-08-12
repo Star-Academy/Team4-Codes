@@ -2,11 +2,24 @@ using System.Collections.Generic;
 using System;
 namespace SearchLibrary
 {
-    public class NoSignKeyword : Keyword
+    public class NoSignKeyword : IKeywordList
     {
-        public HashSet<string> ListProcessor(HashSet<string> output, string id)
+        public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
-            throw new NotImplementedException();
+            bool isFirstTime = true;
+            foreach (string word in Content)
+            {
+                if (!isFirstTime)
+                {
+                    result.IntersectWith(tokens.Map[word]);
+                }
+                else
+                {
+                    result.UnionWith(tokens.Map[word]);
+                    isFirstTime = false;
+                }
+            }
+            return result;
         }
     }
 }

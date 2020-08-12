@@ -11,6 +11,7 @@ namespace Search.Test
         {
             var mUserInput = new Mock<IUserInput>();
             mUserInput.Setup(x => x.ScanInput()).Returns("hello +world -mamad");
+            var result = new HashSet<string>();
 
             QueryProcessor query = new QueryProcessor(mUserInput.Object);
             var ExpectedOrWord = new HashSet<string>();
@@ -20,9 +21,9 @@ namespace Search.Test
             var ExpectedRemoveWord = new HashSet<string>();
             ExpectedRemoveWord.Add("mamad");
             query.Process();
-            Assert.Equal(ExpectedAndWord, query.AndWords);
-            Assert.Equal(ExpectedOrWord, query.OrWords);
-            Assert.Equal(ExpectedRemoveWord, query.RemoveWords);
+            Assert.Equal(ExpectedAndWord, query.AndWords.Content);
+            Assert.Equal(ExpectedOrWord, query.OrWords.Content);
+            Assert.Equal(ExpectedRemoveWord, query.RemoveWords.Content);
         }
     }
 }

@@ -1193,6 +1193,9 @@
         }
       },
       "SearchLibrary/1.0.0": {
+        "dependencies": {
+          "System.Linq": "4.3.0"
+        },
         "runtime": {
           "SearchLibrary.dll": {}
         }

@@ -14,7 +14,6 @@ namespace SearchLibrary
                 string contents = File.ReadAllText(file).ToLower();
                 output.Add(new Document{Id = Path.GetFileName(file), Content = contents});
             }
-
             return output;
         }
     }

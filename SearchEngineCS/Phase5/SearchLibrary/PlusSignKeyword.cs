@@ -2,11 +2,15 @@ using System.Collections.Generic;
 using System;
 namespace SearchLibrary
 {
-    public class PlusSignKeyword : Keyword
+    public class PlusSignKeyword : IKeywordList
     {
-        public HashSet<string> ListProcessor(HashSet<string> output, string id)
+        public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
-            throw new NotImplementedException();
+            foreach (string word in Content)
+            {
+                result.UnionWith(tokens.Map[word]);
+            }
+            return result;
         }
     }
 }

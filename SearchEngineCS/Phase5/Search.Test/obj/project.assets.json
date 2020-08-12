@@ -1813,6 +1813,9 @@
       "SearchLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "System.Linq": "4.3.0"
+        },
         "compile": {
           "bin/placeholder/SearchLibrary.dll": {}
         },
