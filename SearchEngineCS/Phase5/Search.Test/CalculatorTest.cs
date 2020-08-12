@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
+using Moq;
 using SearchLibrary;
 namespace Search.Test
 {
@@ -10,7 +11,15 @@ namespace Search.Test
         [Fact]
         public void CalculateTest()
         {
+            var cal = new Calculator(Inverted);
             SetUp();
+            
+            var mUserInput = new Mock<IUserInput>();
+            mUserInput.Setup(x => x.ScanInput()).Returns("day +spider -rainy");
+            var qp = new QueryProcessor(mUserInput);
+            qp.Process();
+            cal.Calculate(qp);
+            Assert.Equals(new HashSet(){"72", "49"}, cal.Result);
             
         }
         public void SetUp()
