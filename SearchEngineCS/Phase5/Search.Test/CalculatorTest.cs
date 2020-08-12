@@ -11,16 +11,16 @@ namespace Search.Test
         [Fact]
         public void CalculateTest()
         {
-            var cal = new Calculator(Inverted);
             SetUp();
-            
+            var cal = new Calculator(Inverted);
+
             var mUserInput = new Mock<IUserInput>();
             mUserInput.Setup(x => x.ScanInput()).Returns("day +spider -rainy");
-            var qp = new QueryProcessor(mUserInput);
+            var qp = new QueryProcessor(mUserInput.Object);
             qp.Process();
-            cal.Calculate(qp);
-            Assert.Equals(new HashSet(){"72", "49"}, cal.Result);
-            
+            var result = cal.Calculate(qp);
+            Assert.Equal(new HashSet<string>() { "72", "49" }, result);
+
         }
         public void SetUp()
         {

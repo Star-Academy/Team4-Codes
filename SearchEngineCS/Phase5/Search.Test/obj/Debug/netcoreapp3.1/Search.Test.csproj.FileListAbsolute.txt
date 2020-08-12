@@ -196,3 +196,5 @@ D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\Search.Test\bin\Debug\netcoreapp3.
 D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\Search.Test\bin\Debug\netcoreapp3.1\SearchLibrary.pdb
 D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\Search.Test\obj\Debug\netcoreapp3.1\Search.Test.csproj.CopyComplete
 D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\Search.Test\obj\Debug\netcoreapp3.1\Search.Test.genruntimeconfig.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\Search.Test\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\Search.Test\bin\Debug\netcoreapp3.1\Moq.dll

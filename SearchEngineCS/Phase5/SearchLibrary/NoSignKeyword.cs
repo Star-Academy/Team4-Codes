@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
+
 namespace SearchLibrary
 {
     public class NoSignKeyword : IKeywordList
@@ -7,18 +9,26 @@ namespace SearchLibrary
         public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
             bool isFirstTime = true;
-            foreach (string word in Content)
+            if (Content.Count != 0)
             {
-                if (!isFirstTime)
+                foreach (string word in Content)
                 {
-                    result.IntersectWith(tokens.Map[word]);
+                    if (tokens.Map.ContainsKey(word)){
+                        if (!isFirstTime)
+                        {
+                            result.IntersectWith(tokens.Map[word]);
+                        }
+                        else
+                        {
+                            result.UnionWith(tokens.Map[word]);
+                            isFirstTime = false;
+                        }
+                    }
+
                 }
-                else
-                {
-                    result.UnionWith(tokens.Map[word]);
-                    isFirstTime = false;
-                }
+
             }
+
             return result;
         }
     }

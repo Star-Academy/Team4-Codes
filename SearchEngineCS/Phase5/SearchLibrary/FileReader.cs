@@ -9,7 +9,7 @@ namespace SearchLibrary
         public HashSet<Document> ReadAll(string path)
         {
             var output = new HashSet<Document>();
-            foreach (string file in Directory.EnumerateFiles(path, "*.txt"))
+            foreach (string file in Directory.EnumerateFiles(path))
             {
                 string contents = File.ReadAllText(file).ToLower();
                 output.Add(new Document{Id = Path.GetFileName(file), Content = contents});

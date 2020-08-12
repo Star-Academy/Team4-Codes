@@ -10,22 +10,25 @@ namespace Search.Test
         InvertedIndex Inverted;
         IKeywordList IKeyTest;
 
+        public IKeywordTest()
+        {
+            SetUp();
+        }
+
         [Fact]
         public void AndWordTest()
         {
-            SetUp();
             IKeyTest = new NoSignKeyword();
             AddContent(IKeyTest);
-            HashSet<string> output = IKeyTest.ListProcess(result, Inverted);
+            var output = IKeyTest.ListProcess(result, Inverted);
             Assert.Equal(new HashSet<string>() { "21" }, result);
         }
         [Fact]
         public void OrWordTest()
         {
-            SetUp();
             IKeyTest = new PlusSignKeyword();
             AddContent(IKeyTest);
-            HashSet<string> output = IKeyTest.ListProcess(result, Inverted);
+            var output = IKeyTest.ListProcess(result, Inverted);
             Assert.Equal(new HashSet<string>() { "21", "72", "49", "160" }, result);
         }
         [Fact]
@@ -34,7 +37,7 @@ namespace Search.Test
             SetUp();
             IKeyTest = new MinusSignKeyword();
             AddContent(IKeyTest);
-            HashSet<string> output = IKeyTest.ListProcess(result, Inverted);
+            var output = IKeyTest.ListProcess(result, Inverted);
             Assert.Equal(new HashSet<string>() { "160" }, result);
         }
 

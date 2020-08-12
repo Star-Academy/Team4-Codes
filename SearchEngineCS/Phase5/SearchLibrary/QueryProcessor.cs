@@ -16,6 +16,7 @@ namespace SearchLibrary
             OrWords = new PlusSignKeyword();
             AndWords = new NoSignKeyword();
             RemoveWords = new MinusSignKeyword();
+            Process();
         }
         public void Process()
         {

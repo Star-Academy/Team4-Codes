@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System;
+using System.Linq;
+
 namespace SearchLibrary
 {
     public class PlusSignKeyword : IKeywordList

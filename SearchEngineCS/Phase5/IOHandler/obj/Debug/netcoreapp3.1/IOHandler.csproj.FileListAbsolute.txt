@@ -11,3 +11,6 @@ C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreap
 C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.dll
 C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.pdb
 C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.genruntimeconfig.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\SearchLibrary.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\SearchLibrary.pdb
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.csproj.CopyComplete

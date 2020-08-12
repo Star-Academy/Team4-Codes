@@ -1,22 +1,26 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 namespace SearchLibrary
 {
     public class Calculator
     {
-        InvertedIndex Tokens { get; set; }
-        HashSet<string> Result;
+        private readonly InvertedIndex tokens;
 
         public Calculator(InvertedIndex tokens)
         {
-            this.Tokens = tokens;
-            Result = new HashSet<string>();
+            this.tokens = tokens ?? throw new ArgumentNullException(nameof(tokens));
         }
-        public void Calculate(QueryProcessor query)
+
+        public HashSet<string> Calculate(QueryProcessor query)
         {
-            query.AndWords.ListProcess(Result, Tokens);
-            query.OrWords.ListProcess(Result, Tokens);
-            query.RemoveWords.ListProcess(Result, Tokens);
+            var result = new HashSet<string>();
+
+            result = query.AndWords.ListProcess(result, tokens);
+            result = query.OrWords.ListProcess(result, tokens);
+            result = query.RemoveWords.ListProcess(result, tokens);
+
+            return new HashSet<string>(result);
         }
     }
 }

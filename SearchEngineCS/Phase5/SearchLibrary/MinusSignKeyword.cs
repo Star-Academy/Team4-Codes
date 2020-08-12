@@ -7,12 +7,11 @@ namespace SearchLibrary
     {
         public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
+            
             foreach (string word in Content)
             {
-                foreach (string id in tokens.Map[word])
-                {
-                    result.Remove(id);
-                }
+                foreach(string id in tokens.Map[word])
+                result.Remove(id);
             }
             return result;
         }

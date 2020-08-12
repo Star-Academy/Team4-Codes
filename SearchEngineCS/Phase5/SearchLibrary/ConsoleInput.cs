@@ -5,7 +5,7 @@ namespace SearchLibrary
     {
         public string ScanInput()
         {
-            Console.WriteLine("Enter string to search");
+            Console.WriteLine("\nEnter string to search");
             string input = Console.ReadLine();
             return input;
         }
