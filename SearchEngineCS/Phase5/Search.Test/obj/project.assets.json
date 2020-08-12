@@ -6178,19 +6178,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\": {}
+    "C:\\Users\\farah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\Search.Test\\Search.Test.csproj",
+      "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\Search.Test\\Search.Test.csproj",
       "projectName": "Search.Test",
-      "projectPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\Search.Test\\Search.Test.csproj",
-      "packagesPath": "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\",
-      "outputPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\Search.Test\\obj\\",
+      "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\Search.Test\\Search.Test.csproj",
+      "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\Search.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Saba Ebrahimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6201,8 +6201,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
-              "projectPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj"
+            "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
+              "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj"
             }
           }
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {}
+    "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {}
   },
   "projects": {
-    "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
+    "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj",
         "projectName": "SearchLibrary",
-        "projectPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj",
-        "packagesPath": "C:\\Users\\Saba Ebrahimi\\.nuget\\packages\\",
-        "outputPath": "D:\\CodeStar\\Team4-Codes\\SearchEngineCS\\Phase5\\SearchLibrary\\obj\\",
+        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj",
+        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Saba Ebrahimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"

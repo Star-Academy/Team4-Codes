@@ -22,7 +22,7 @@ namespace library
             var studentsJson = File.ReadAllText(StudentsPath);
             var students = JsonSerializer.Deserialize<List<Student>>(studentsJson);
             var scores = JsonSerializer.Deserialize<List<StudentScore>>(scoresJson);
-            Dictionary<int, int> studentsIndices = new Dictionary<int, int>();
+            var studentsIndices = new Dictionary<int, int>();
             studentsIndices = students.Select((n, i) => new { n, i }).ToDictionary(x => x.n.StudentNumber, x => x.i);
             foreach (StudentScore score in scores){
                 students[studentsIndices[score.StudentNumber]].UpdateScores(score);
