@@ -1,9 +1,9 @@
 using System;
 namespace SearchLibrary
 {
-    public class UserInput
+    public class ConsoleInput:IUserInput
     {
-        public virtual string ScanInput()
+        public string ScanInput()
         {
             Console.WriteLine("Enter string to search");
             string input = Console.ReadLine();

@@ -4,13 +4,13 @@ namespace SearchLibrary
 {
     public class QueryProcessor
     {
-        UserInput InputFromUser { get; set; }
+        IUserInput InputFromUser { get; set; }
         public HashSet<string> OrWords { get; set; }
         public HashSet<string> AndWords { get; set; }
         public HashSet<string> RemoveWords { get; set; }
 
 
-        public QueryProcessor(UserInput userInput)
+        public QueryProcessor(IUserInput userInput)
         {
             this.InputFromUser = userInput;
             OrWords = new HashSet<string>();

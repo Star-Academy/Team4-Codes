@@ -9,7 +9,7 @@ namespace Search.Test
         [Fact]
         public void inputMock()
         {
-            var mUserInput = new Mock<UserInput>();
+            var mUserInput = new Mock<IUserInput>();
             mUserInput.Setup(x => x.ScanInput()).Returns("hello +world -mamad");
 
             QueryProcessor query = new QueryProcessor(mUserInput.Object);

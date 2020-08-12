@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System;
 namespace SearchLibrary
 {
-    public class PlusSignKeyword : IKeyword
+    public class PlusSignKeyword : Keyword
     {
         public HashSet<string> ListProcessor(HashSet<string> output, string id)
         {

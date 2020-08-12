@@ -1,13 +1,21 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 namespace SearchLibrary
 {
     public class FileReader : IDBReader
     {
-        string ReadAll(string path)
+
+        public HashSet<Document> ReadAll(string path)
         {
-            throw new NotImplementedException();
-            // string[] filePaths = Directory.GetFiles()
+            var output = new HashSet<Document>();
+            foreach (string file in Directory.EnumerateFiles(path, "*.txt"))
+            {
+                string contents = File.ReadAllText(file).ToLower();
+                output.Add(new Document{Id = Path.GetFileName(file), Content = contents});
+            }
+
+            return output;
         }
     }
 }

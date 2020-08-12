@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 namespace SearchLibrary
 {
-    public interface IDBReader
+    public class Calculator
     {
-         HashSet<Document> ReadAll(string path);
+       
+
+       
     }
 }
