@@ -20,7 +20,7 @@ namespace Search.Test
             var iKeyTest = new NoSignKeyword();
             AddContent(iKeyTest);
             var output = iKeyTest.ListProcess(result, inverted);
-            Assert.Equal(new HashSet<string>() { "21" }, result);
+            Assert.Equal(new HashSet<string>() { "21" }, output);
         }
         [Fact]
         public void OrWordTest()
@@ -28,7 +28,7 @@ namespace Search.Test
             var iKeyTest = new PlusSignKeyword();
             AddContent(iKeyTest);
             var output = iKeyTest.ListProcess(result, inverted);
-            Assert.Equal(new HashSet<string>() { "21", "72", "49", "160" }, result);
+            Assert.Equal(new HashSet<string>() { "21", "72", "49", "160" }, output);
         }
         [Fact]
         public void RemoveWordTest()
@@ -36,7 +36,7 @@ namespace Search.Test
             var iKeyTest = new MinusSignKeyword();
             AddContent(iKeyTest);
             var output = iKeyTest.ListProcess(result, inverted);
-            Assert.Equal(new HashSet<string>() { "160" }, result);
+            Assert.Equal(new HashSet<string>() { "160" }, output);
         }
 
         void AddContent(IKeywordList test)

@@ -4,8 +4,8 @@ namespace SearchLibrary
 {
     public interface IKeywordList
     {
-        public HashSet<string> Content { get; }
+        HashSet<string> Content { get; }
 
-        public abstract HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens);
+        HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens);
     }
 }
