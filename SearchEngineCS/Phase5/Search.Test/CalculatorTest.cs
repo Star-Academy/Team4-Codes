@@ -7,12 +7,12 @@ namespace Search.Test
 {
     public class CalculatorTest
     {
-        InvertedIndex Inverted;
+        private InvertedIndex inverted;
         [Fact]
         public void CalculateTest()
         {
-            SetUp();
-            var cal = new Calculator(Inverted);
+            inverted = SetUpInverted();
+            var cal = new Calculator(inverted);
 
             var mUserInput = new Mock<IUserInput>();
             mUserInput.Setup(x => x.ScanInput()).Returns("day +spider -rainy");
@@ -22,7 +22,7 @@ namespace Search.Test
             Assert.Equal(new HashSet<string>() { "72", "49" }, result);
 
         }
-        public void SetUp()
+        public InvertedIndex SetUpInverted()
         {
             var docs = new HashSet<Document>();
             var d1 = new Document { Id = "21", Content = "rainy day spider".ToLower() };
@@ -31,8 +31,9 @@ namespace Search.Test
             docs.Add(d1);
             docs.Add(d2);
             docs.Add(d3);
-            Inverted = new InvertedIndex();
-            Inverted.FillMap(docs);
+            inverted = new InvertedIndex();
+            inverted.FillMap(docs);
+            return inverted;
         }
     }
 }

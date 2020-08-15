@@ -13,17 +13,15 @@ namespace Search.Test
             mUserInput.Setup(x => x.ScanInput()).Returns("hello +world -mamad");
             var result = new HashSet<string>();
 
-            QueryProcessor query = new QueryProcessor(mUserInput.Object);
-            var ExpectedOrWord = new HashSet<string>();
-            ExpectedOrWord.Add("world");
-            var ExpectedAndWord = new HashSet<string>();
-            ExpectedAndWord.Add("hello");
-            var ExpectedRemoveWord = new HashSet<string>();
-            ExpectedRemoveWord.Add("mamad");
+            var query = new QueryProcessor(mUserInput.Object);
+            var expectedOrWord = new HashSet<string>() {"world"};
+            var expectedAndWord = new HashSet<string>() {"hello"};
+            var expectedRemoveWord = new HashSet<string>() {"mamad"};
+
             query.Process();
-            Assert.Equal(ExpectedAndWord, query.AndWords.Content);
-            Assert.Equal(ExpectedOrWord, query.OrWords.Content);
-            Assert.Equal(ExpectedRemoveWord, query.RemoveWords.Content);
+            Assert.Equal(expectedAndWord, query.AndWords.Content);
+            Assert.Equal(expectedOrWord, query.OrWords.Content);
+            Assert.Equal(expectedRemoveWord, query.RemoveWords.Content);
         }
     }
 }

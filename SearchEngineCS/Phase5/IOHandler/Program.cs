@@ -21,7 +21,8 @@ namespace IOHandler
             {
                 var input = new ConsoleInput();
                 var queryProcessor = new QueryProcessor(input);
-
+                queryProcessor.Process();
+                
                 var result = calculator.Calculate(queryProcessor);
 
                 foreach (string id in result)

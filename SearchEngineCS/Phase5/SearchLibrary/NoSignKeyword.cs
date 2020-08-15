@@ -8,6 +8,8 @@ namespace SearchLibrary
     {
         public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
+            var output = result;
+
             bool isFirstTime = true;
             if (Content.Count != 0)
             {
@@ -16,11 +18,11 @@ namespace SearchLibrary
                     if (tokens.Map.ContainsKey(word)){
                         if (!isFirstTime)
                         {
-                            result.IntersectWith(tokens.Map[word]);
+                            output.IntersectWith(tokens.Map[word]);
                         }
                         else
                         {
-                            result.UnionWith(tokens.Map[word]);
+                            output.UnionWith(tokens.Map[word]);
                             isFirstTime = false;
                         }
                     }
@@ -29,7 +31,7 @@ namespace SearchLibrary
 
             }
 
-            return result;
+            return output;
         }
     }
 }

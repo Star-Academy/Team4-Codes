@@ -14,16 +14,11 @@ namespace Search.Test
         {
             var virtualDirectoryPath = CreateVirtualDirectory();
             var file1Path = CreateVirtualFile(virtualDirectoryPath, "file1.txt", "rainy day");
-            // var file2Path = CreateVirtualFile(virtualDirectoryPath, "file2.txt", "clOUdy night");
-            // var file3Path = CreateVirtualFile(virtualDirectoryPath, "file3.txt", "spIder man");
 
             var d1 = new Document { Id = "file1.txt", Content = "rainy day".ToLower() };
-            // var d2 = new Document { Id = "file2.txt", Content = "clOUdy night".ToLower() };
-            // var d3 = new Document { Id = "file3.txt", Content = "spIder man".ToLower() };
+
             var expectedSet = new HashSet<Document>();
-            expectedSet.Add(d1);
-            // expectedSet.Add(d2);
-            // expectedSet.Add(d3);
+            expectedSet.Add(d1);   
 
             var reader = new FileReader();
 

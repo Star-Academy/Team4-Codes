@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DMV7U1mDLcQ9a2YjNn6aoKpqyJfCzKqnGDxuWhC15N70NB6vBqwy7kiIpr30oq8Nk6DdsBTLZWCa1C/VQakOWA==",
+  "dgSpecHash": "lx/5DUDjmdEkSQZsrOumPgKzVxCjyevy/fFfXwLQ3sQDZ7jNaN05dGnOs1IQnL72Tf2L9Jfs76jiGaCoto1pDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\Search.Test\\Search.Test.csproj",
+  "projectFilePath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\Search.Test\\Search.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\farah\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\farah\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

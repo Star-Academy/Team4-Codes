@@ -8,11 +8,12 @@ namespace SearchLibrary
     {
         public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
+            var output = result;
             foreach (string word in Content)
             {
-                result.UnionWith(tokens.Map[word]);
+                output.UnionWith(tokens.Map[word]);
             }
-            return result;
+            return output;
         }
     }
 }

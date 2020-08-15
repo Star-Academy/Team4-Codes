@@ -7,37 +7,35 @@ namespace Search.Test
     public class IKeywordTest
     {
         HashSet<string> result = new HashSet<string>() { "21", "72", "49", "160" };
-        InvertedIndex Inverted;
-        IKeywordList IKeyTest;
+        InvertedIndex inverted;
 
         public IKeywordTest()
         {
-            SetUp();
+            inverted = SetUpInverted();
         }
 
         [Fact]
         public void AndWordTest()
         {
-            IKeyTest = new NoSignKeyword();
-            AddContent(IKeyTest);
-            var output = IKeyTest.ListProcess(result, Inverted);
+            var iKeyTest = new NoSignKeyword();
+            AddContent(iKeyTest);
+            var output = iKeyTest.ListProcess(result, inverted);
             Assert.Equal(new HashSet<string>() { "21" }, result);
         }
         [Fact]
         public void OrWordTest()
         {
-            IKeyTest = new PlusSignKeyword();
-            AddContent(IKeyTest);
-            var output = IKeyTest.ListProcess(result, Inverted);
+            var iKeyTest = new PlusSignKeyword();
+            AddContent(iKeyTest);
+            var output = iKeyTest.ListProcess(result, inverted);
             Assert.Equal(new HashSet<string>() { "21", "72", "49", "160" }, result);
         }
         [Fact]
         public void RemoveWordTest()
         {
-            SetUp();
-            IKeyTest = new MinusSignKeyword();
-            AddContent(IKeyTest);
-            var output = IKeyTest.ListProcess(result, Inverted);
+            var iKeyTest = new MinusSignKeyword();
+            AddContent(iKeyTest);
+            var output = iKeyTest.ListProcess(result, inverted);
             Assert.Equal(new HashSet<string>() { "160" }, result);
         }
 
@@ -47,7 +45,7 @@ namespace Search.Test
             test.Content.Add("spider");
             test.Content.Add("day");
         }
-        void SetUp()
+        InvertedIndex SetUpInverted()
         {
             var docs = new HashSet<Document>();
             var d1 = new Document { Id = "21", Content = "rainy day spider".ToLower() };
@@ -56,8 +54,9 @@ namespace Search.Test
             docs.Add(d1);
             docs.Add(d2);
             docs.Add(d3);
-            Inverted = new InvertedIndex();
-            Inverted.FillMap(docs);
+            inverted = new InvertedIndex();
+            inverted.FillMap(docs);
+            return inverted;
         }
 
     }

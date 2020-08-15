@@ -9,6 +9,19 @@ namespace Search.Test
         [Fact]
         public void FillMapTest()
         {
+            var invertedIndex = SetUpInvertedIndex();
+            
+            var expectedDictionary = new Dictionary<string, HashSet<string>>();
+            expectedDictionary.Add("rainy", new HashSet<string>{"file1.txt"});
+            expectedDictionary.Add("day", new HashSet<string>{"file1.txt", "file2.txt"});
+            expectedDictionary.Add("cloudy", new HashSet<string>{"file2.txt"});
+            expectedDictionary.Add("spider", new HashSet<string>{"file3.txt"});
+            expectedDictionary.Add("man", new HashSet<string>{"file3.txt"});
+
+            Assert.Equal(expectedDictionary, invertedIndex.Map);
+        }
+
+        InvertedIndex SetUpInvertedIndex(){
             var docs = new HashSet<Document>();
             var d1 = new Document { Id = "file1.txt", Content = "rainy day".ToLower() };
             var d2 = new Document { Id = "file2.txt", Content = "clOUdy day".ToLower() };
@@ -18,14 +31,7 @@ namespace Search.Test
             docs.Add(d3);
             InvertedIndex invertedIndex = new InvertedIndex();
             invertedIndex.FillMap(docs);
-            var expectedDictionary = new Dictionary<string, HashSet<string>>();
-            expectedDictionary.Add("rainy", new HashSet<string>{"file1.txt"});
-            expectedDictionary.Add("day", new HashSet<string>{"file1.txt", "file2.txt"});
-            expectedDictionary.Add("cloudy", new HashSet<string>{"file2.txt"});
-            expectedDictionary.Add("spider", new HashSet<string>{"file3.txt"});
-            expectedDictionary.Add("man", new HashSet<string>{"file3.txt"});
-
-            Assert.Equal(expectedDictionary, invertedIndex.Map);
+            return invertedIndex;
         }
     }
 }

@@ -4,23 +4,19 @@ namespace SearchLibrary
 {
     public class QueryProcessor
     {
-        IUserInput InputFromUser { get; set; }
-        public IKeywordList OrWords { get; set; }
-        public IKeywordList AndWords { get; set; }
-        public IKeywordList RemoveWords { get; set; }
+        private IUserInput inputFromUser { get; set; }
+        public IKeywordList OrWords { get; } = new PlusSignKeyword();
+        public IKeywordList AndWords { get; } = new NoSignKeyword();
+        public IKeywordList RemoveWords { get; } = new MinusSignKeyword();
 
 
         public QueryProcessor(IUserInput userInput)
         {
-            this.InputFromUser = userInput;
-            OrWords = new PlusSignKeyword();
-            AndWords = new NoSignKeyword();
-            RemoveWords = new MinusSignKeyword();
-            Process();
+            this.inputFromUser = userInput;
         }
         public void Process()
         {
-            string[] keywords = InputFromUser.ScanInput().Split(" ");
+            string[] keywords = inputFromUser.ScanInput().Split(" ");
             foreach (string keyword in keywords)
             {
                 if (keyword.StartsWith("+"))
