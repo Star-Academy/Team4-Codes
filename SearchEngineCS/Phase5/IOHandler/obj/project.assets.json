@@ -1086,11 +1086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
+      "projectUniqueName": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
       "projectName": "IOHandler",
-      "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
+      "projectPath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
       "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\obj\\",
+      "outputPath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1104,8 +1104,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
-              "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj"
+            "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
+              "projectPath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj"
             }
           }
         }
