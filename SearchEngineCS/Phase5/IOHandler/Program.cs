@@ -6,7 +6,7 @@ namespace IOHandler
 
     class Program
     {
-        private const string EnglishDataDirectory = "..\\EnglishData";
+        private const string EnglishDataDirectory = ".\\EnglishData";
 
         static void Main(string[] args)
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n4lhXL8dQfBlAyvPimSwi8M00mHCLAkop1uAHr9sT2IiTKHsVNr72O1KtBgHEQzkhlCUZwFrZIR4l9jgmC9hnA==",
+  "dgSpecHash": "JHDv9IrjD6Em5iHb2iKDyvGUln07PQgTLimT1ZhkEaMxN7NX31k558pTHRKs9CpT4XbrMPBzuf3r2heAzd72aQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj",
+  "projectFilePath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\farah\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\farah\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
