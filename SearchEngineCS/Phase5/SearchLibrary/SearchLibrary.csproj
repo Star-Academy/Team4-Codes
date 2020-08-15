@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageId>StarAcademy.Team4.SearchLibrary</PackageId>
+    <Authors>Saba Ebrahim and Danyal Farahany</Authors>
+    <Company>Star Academy</Company>
   </PropertyGroup>
 
   <ItemGroup>
