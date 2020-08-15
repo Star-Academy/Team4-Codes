@@ -5,13 +5,14 @@ namespace SearchLibrary
 {
     public class MinusSignKeyword : IKeywordList
     {
-        public override HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
+        public HashSet<string> Content { get; } = new HashSet<string>();
+        public HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens)
         {
-            var output = result;
+            var output = new HashSet<string>(result);
             foreach (string word in Content)
             {
-                foreach(string id in tokens.Map[word])
-                output.Remove(id);
+                foreach (string id in tokens.Map[word])
+                    output.Remove(id);
             }
             return output;
         }

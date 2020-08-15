@@ -7,11 +7,10 @@ namespace Search.Test
 {
     public class CalculatorTest
     {
-        private InvertedIndex inverted;
         [Fact]
         public void CalculateTest()
         {
-            inverted = SetUpInverted();
+            var inverted = SetUpInverted();
             var cal = new Calculator(inverted);
 
             var mUserInput = new Mock<IUserInput>();
@@ -31,7 +30,7 @@ namespace Search.Test
             docs.Add(d1);
             docs.Add(d2);
             docs.Add(d3);
-            inverted = new InvertedIndex();
+            var inverted = new InvertedIndex();
             inverted.FillMap(docs);
             return inverted;
         }

@@ -4,7 +4,7 @@ namespace SearchLibrary
 {
     public class QueryProcessor
     {
-        private IUserInput inputFromUser { get; set; }
+        private readonly IUserInput inputFromUser;
         public IKeywordList OrWords { get; } = new PlusSignKeyword();
         public IKeywordList AndWords { get; } = new NoSignKeyword();
         public IKeywordList RemoveWords { get; } = new MinusSignKeyword();

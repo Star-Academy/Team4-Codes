@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace SearchLibrary
 {
-    public abstract class IKeywordList
+    public interface IKeywordList
     {
-        public HashSet<string> Content { get; } = new HashSet<string>();
+        public HashSet<string> Content { get; }
 
         public abstract HashSet<string> ListProcess(HashSet<string> result, InvertedIndex tokens);
     }
