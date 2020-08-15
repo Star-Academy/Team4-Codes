@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,dotnetcore,csharp
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,dotnetcore,csharp
+=======
 # Created by https://www.toptal.com/developers/gitignore/api/csharp,visualstudiocode,dotnetcore
 # Edit at https://www.toptal.com/developers/gitignore?templates=csharp,visualstudiocode,dotnetcore
+>>>>>>> 92bdd728272023d46a9141440dd345ce2174834a
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -378,4 +383,8 @@ obj/
 # Ignore all local history of files
 .history
 
+<<<<<<< HEAD
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,dotnetcore,csharp
+=======
 # End of https://www.toptal.com/developers/gitignore/api/csharp,visualstudiocode,dotnetcore
+>>>>>>> 92bdd728272023d46a9141440dd345ce2174834a

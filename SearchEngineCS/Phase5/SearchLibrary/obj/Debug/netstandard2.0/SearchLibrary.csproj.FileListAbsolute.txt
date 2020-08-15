@@ -1,0 +1,15 @@
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\bin\Debug\netstandard2.0\SearchLibrary.deps.json
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\bin\Debug\netstandard2.0\SearchLibrary.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\bin\Debug\netstandard2.0\SearchLibrary.pdb
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.csprojAssemblyReference.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.AssemblyInfoInputs.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.AssemblyInfo.cs
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.csproj.CoreCompileInputs.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.pdb
+D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.csprojAssemblyReference.cache
+D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.AssemblyInfoInputs.cache
+D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.AssemblyInfo.cs
+D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.csproj.CoreCompileInputs.cache
+D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.dll
+D:\CodeStar\Team4-Codes\SearchEngineCS\Phase5\SearchLibrary\obj\Debug\netstandard2.0\SearchLibrary.pdb

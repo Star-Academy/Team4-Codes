@@ -1,0 +1,16 @@
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\IOHandler.exe
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\IOHandler.deps.json
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\IOHandler.runtimeconfig.json
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\IOHandler.runtimeconfig.dev.json
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\IOHandler.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\IOHandler.pdb
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\SearchLibrary.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\bin\Debug\netcoreapp3.1\SearchLibrary.pdb
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.csprojAssemblyReference.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.AssemblyInfoInputs.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.AssemblyInfo.cs
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.csproj.CoreCompileInputs.cache
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.csproj.CopyComplete
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.dll
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.pdb
+C:\Users\farah\Desktop\vscws\SearchEngineCS\Phase5\IOHandler\obj\Debug\netcoreapp3.1\IOHandler.genruntimeconfig.cache
