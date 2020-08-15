@@ -162,17 +162,17 @@
           "ref/netstandard1.3/_._": {}
         }
       },
-      "SearchLibrary/1.0.0": {
+      "StarAcademy.Team4.SearchLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "System.Linq": "4.3.0"
         },
         "compile": {
-          "bin/placeholder/SearchLibrary.dll": {}
+          "bin/placeholder/StarAcademy.Team4.SearchLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SearchLibrary.dll": {}
+          "bin/placeholder/StarAcademy.Team4.SearchLibrary.dll": {}
         }
       }
     }
@@ -1069,7 +1069,7 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "SearchLibrary/1.0.0": {
+    "StarAcademy.Team4.SearchLibrary/1.0.0": {
       "type": "project",
       "path": "../SearchLibrary/SearchLibrary.csproj",
       "msbuildProject": "../SearchLibrary/SearchLibrary.csproj"
@@ -1077,7 +1077,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "SearchLibrary >= 1.0.0"
+      "StarAcademy.Team4.SearchLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1086,11 +1086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
+      "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
       "projectName": "IOHandler",
-      "projectPath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
+      "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\IOHandler.csproj",
       "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\obj\\",
+      "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\IOHandler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1104,8 +1104,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
-              "projectPath": "c:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj"
+            "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj": {
+              "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\SearchEngineCS\\Phase5\\SearchLibrary\\SearchLibrary.csproj"
             }
           }
         }
