@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj": {}
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj": {
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj",
-        "projectName": "library",
-        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\library.csproj",
+        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj",
+        "projectName": "Library",
+        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\library\\obj\\",
+        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"

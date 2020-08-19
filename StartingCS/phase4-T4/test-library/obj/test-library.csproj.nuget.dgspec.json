@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\farah\\Desktop\\phase4-T4\\test-library\\test-library.csproj": {}
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\test-library\\test-library.csproj": {}
   },
   "projects": {
-    "c:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj": {
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj",
-        "projectName": "library",
-        "projectPath": "c:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj",
+        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj",
+        "projectName": "Library",
+        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\farah\\Desktop\\phase4-T4\\library\\obj\\",
+        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -65,14 +65,14 @@
         }
       }
     },
-    "c:\\Users\\farah\\Desktop\\phase4-T4\\test-library\\test-library.csproj": {
+    "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\test-library\\test-library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\farah\\Desktop\\phase4-T4\\test-library\\test-library.csproj",
+        "projectUniqueName": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\test-library\\test-library.csproj",
         "projectName": "test-library",
-        "projectPath": "c:\\Users\\farah\\Desktop\\phase4-T4\\test-library\\test-library.csproj",
+        "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\test-library\\test-library.csproj",
         "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\farah\\Desktop\\phase4-T4\\test-library\\obj\\",
+        "outputPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\test-library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -86,8 +86,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "c:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj": {
-                "projectPath": "c:\\Users\\farah\\Desktop\\phase4-T4\\library\\library.csproj"
+              "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\farah\\Desktop\\vscws\\StartingCS\\phase4-T4\\Library\\Library.csproj"
               }
             }
           }

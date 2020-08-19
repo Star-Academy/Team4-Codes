@@ -8,9 +8,9 @@
     ".NETCoreApp,Version=v3.1": {
       "test-library/1.0.0": {
         "dependencies": {
+          "Library": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "coverlet.collector": "1.2.0",
-          "library": "1.0.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -360,13 +360,13 @@
           "Microsoft.NET.Test.Sdk": "16.5.0"
         }
       },
-      "library/1.0.0": {
+      "Library/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "System.Text.Json": "4.7.2"
         },
         "runtime": {
-          "library.dll": {}
+          "Library.dll": {}
         }
       }
     }
@@ -489,7 +489,7 @@
       "path": "xunit.runner.visualstudio/2.4.0",
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
-    "library/1.0.0": {
+    "Library/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
