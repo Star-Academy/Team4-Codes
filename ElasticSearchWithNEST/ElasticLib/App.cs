@@ -34,7 +34,7 @@ namespace ElasticLib
             validator.Evaluate();
 
             indexManager.DeleteIndex(client, IndexName);
-            
+
         }
     }
 }
