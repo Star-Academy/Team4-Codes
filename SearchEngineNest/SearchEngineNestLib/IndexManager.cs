@@ -1,6 +1,7 @@
 using Nest;
+using System.Collections.Generic;
 using SearchEngineNestLib.Models;
-
+using System;
 namespace SearchEngineNestLib
 {
     public class IndexManager
@@ -10,7 +11,6 @@ namespace SearchEngineNestLib
         {
             var response = client.Indices.Create(indexName,
                     s => s.Settings(settings => settings
-                        .Setting("max_ngram_diff", 8)
                         .Analysis(analysis => analysis
                             .Analyzers(analyzer => analyzer
                                 .Custom(MyAnalizer, custom => custom

@@ -16,15 +16,16 @@ namespace SearchEngineNestLib
             this.Client = client;
             this.IndexName = indexName;
         }
-        public void BoolAndMatchSample()
+        public void BoolAndMatchSample(List<string> mamad)
         {
+            foreach(string val in mamad){
             QueryContainer query = new BoolQuery
             {
                 Must = new List<QueryContainer>
                 {
                     new MatchQuery
                     {
-                        Field = "Contents",
+                        Field = "content",
                         Query = "hello"
                     }
                 }
@@ -33,6 +34,7 @@ namespace SearchEngineNestLib
             Response = Client.Search<Document>(s => s
                 .Index(IndexName)
                 .Query(q => query));
+            }
         }
         public void ShowResult()
         {

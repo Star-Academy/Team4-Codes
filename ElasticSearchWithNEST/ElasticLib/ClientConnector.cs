@@ -13,8 +13,8 @@ namespace ElasticLib
             var connectionSettings = new ConnectionSettings(uri);
             connectionSettings.EnableDebugMode();
             var client = new ElasticClient(connectionSettings);
-            // var response = client.Ping();
-            // Console.WriteLine(response);
+            var response = client.Ping();
+            Console.WriteLine(response);
             return client;
         }
     }

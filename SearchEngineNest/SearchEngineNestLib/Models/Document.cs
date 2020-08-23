@@ -22,5 +22,10 @@ namespace SearchEngineNestLib.Models
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Content);
             return hashCode;
         }
+
+        public override string ToString()
+        {
+            return this.ID;
+        }
     }
 }

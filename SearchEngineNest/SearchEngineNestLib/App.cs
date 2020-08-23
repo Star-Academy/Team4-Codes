@@ -1,8 +1,10 @@
+using Nest;
+using System;
 namespace SearchEngineNestLib
 {
     public class App
     {
-        public string IndexName = "EnglishDocs";
+        public string IndexName = "english-docs";
         private const string Path = "..\\EnglishData";
         public void Start()
         {
@@ -11,7 +13,6 @@ namespace SearchEngineNestLib
 
             var indexManager = new IndexManager();
             indexManager.CreateIndex(client, IndexName);
-
             var docReader = new DocReader();
             var docs = docReader.ReadAll(Path);
 
@@ -21,11 +22,11 @@ namespace SearchEngineNestLib
             client.Indices.Refresh(IndexName);
 
             var queryManager = new QueryManager(client, IndexName);
-            
-            queryManager.BoolAndMatchSample();
+            List<string> mamad = new List<string> {"hello", "friend"};
+            queryManager.BoolAndMatchSample(mamad);
             queryManager.ShowResult();
-
-            //indexManager.DeleteIndex(client, IndexName);
+            Console.WriteLine(queryManager.Response);
+            indexManager.DeleteIndex(client, IndexName);
 
         }
     }

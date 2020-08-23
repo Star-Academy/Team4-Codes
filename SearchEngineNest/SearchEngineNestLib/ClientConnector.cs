@@ -10,8 +10,6 @@ namespace SearchEngineNestLib
             var connectionSettings = new ConnectionSettings(uri);
             connectionSettings.EnableDebugMode();
             var client = new ElasticClient(connectionSettings);
-            // var response = client.Ping();
-            // Console.WriteLine(response);
             return client;
         }
     }
