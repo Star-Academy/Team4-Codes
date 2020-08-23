@@ -119,9 +119,8 @@ namespace ElasticLib
         public static PropertiesDescriptor<Person> AddLocationFieldMapping(this PropertiesDescriptor<Person> propertiesDescriptor)
         {
             return propertiesDescriptor
-                .Text(d => d
-                    .Name(p => p.Location)
-                );
+                .GeoPoint(t => t
+                    .Name(n => n.Location));
         }
     }
 }

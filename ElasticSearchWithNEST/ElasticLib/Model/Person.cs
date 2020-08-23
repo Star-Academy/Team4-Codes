@@ -46,7 +46,7 @@ namespace ElasticLib.Models
         public double Longitude {get;set;}
 
         private string location = null;
-        public string Location
+        public string Location 
         {
             get
             {
@@ -59,5 +59,22 @@ namespace ElasticLib.Models
                 location = value;
             }
         } 
+
+        public void x (){
+            this.Location = "mahdi";
+        }
+        public override string ToString(){
+            return "Name: " + this.Name + "\n"
+            + "Age: " + this.Age + "\n"
+            + "Gender: " + this.Gender + "\n"
+            + "Eye Color: " + this.EyeColor + "\n"
+            + "Company: " + this.Company + "\n"
+            + "Phone Num.: " + this.Phone + "\n"
+            + "Email: " + this.Email + "\n"
+            + "Address: " + this.Address + "\n"
+            + "About: " + this.About
+            + "Registration Date: " + this.RegistrationDate + "\n"
+            + "Location: " + this.Location + "\n";
+        }
     }
 }

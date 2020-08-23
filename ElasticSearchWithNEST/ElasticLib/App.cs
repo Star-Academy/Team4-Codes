@@ -27,9 +27,9 @@ namespace ElasticLib
 
             var queryManager = new QueryManager(client, IndexName);
             
-            queryManager.SampleQuery1();
+            queryManager.GeoQuery();
             queryManager.ShowResult();
-
+            Console.WriteLine(queryManager.Response);
 
             indexManager.DeleteIndex(client, IndexName);
             
