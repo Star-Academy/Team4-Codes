@@ -86,11 +86,11 @@ namespace ElasticLib
 
         public void TermsSample()
         {
-            QueryContainer query = new TermsSetQuery
+            QueryContainer query = new TermsQuery
             {
                 Boost = 1.1,
                 Field = "eyeColor",
-                Terms = new List<string> { "blue", "brown", "green" }
+                Terms = new List<string> { "blue", "brown" }
             };
 
             Response = Client.Search<Person>(s => s
@@ -121,9 +121,9 @@ namespace ElasticLib
             QueryContainer geoQuery = new GeoDistanceQuery
             {
                 Field = "location",
-                DistanceType = GeoDistanceType.Plane,
+                DistanceType = GeoDistanceType.Arc,
                 Location = new GeoLocation(-21, -148),
-                Distance = 1000.ToString()
+                Distance = "100km"
             };
             Response = Client.Search<Person>(s => s
                 .Index(IndexName)

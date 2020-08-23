@@ -111,8 +111,14 @@ namespace ElasticLib
         public static PropertiesDescriptor<Person> AddRegistrationDateFieldMapping(this PropertiesDescriptor<Person> propertiesDescriptor)
         {
             return propertiesDescriptor
-                .Date(d => d
-                    .Name(p => p.RegistrationDate)
+                .Text(d => d
+                    .Name(p => p.RegisterationDate)
+                    .Fields(f => f
+                        .Text(ng => ng
+                            .Name("ngram")
+                            .Analyzer("myNgramAnalyzer")
+                        )
+                    )
                 );
         }
 

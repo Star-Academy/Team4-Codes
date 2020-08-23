@@ -27,7 +27,7 @@ namespace ElasticLib
 
             var queryManager = new QueryManager(client, IndexName);
             
-            queryManager.GeoQuery();
+            queryManager.TermsSample();
             queryManager.ShowResult();
             Console.WriteLine(queryManager.Response);
 

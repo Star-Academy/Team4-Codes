@@ -34,8 +34,8 @@ namespace ElasticLib.Models
         [JsonPropertyName("about")]
         public string About {get;set;}
 
-        [JsonPropertyName("registration_date")]
-        public DateTime RegistrationDate {get;set;}
+        [JsonPropertyName("registeration_date")]
+        public string RegisterationDate {get;set;}
 
         [Ignore]
         [JsonPropertyName("latitude")]
@@ -73,7 +73,7 @@ namespace ElasticLib.Models
             + "Email: " + this.Email + "\n"
             + "Address: " + this.Address + "\n"
             + "About: " + this.About
-            + "Registration Date: " + this.RegistrationDate + "\n"
+            + "Registration Date: " + this.RegisterationDate + "\n"
             + "Location: " + this.Location + "\n";
         }
     }
