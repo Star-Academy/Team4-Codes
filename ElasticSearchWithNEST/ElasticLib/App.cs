@@ -28,8 +28,10 @@ namespace ElasticLib
             var queryManager = new QueryManager(client, IndexName);
             
             queryManager.TermsSample();
-            queryManager.ShowResult();
-            Console.WriteLine(queryManager.Response);
+            //queryManager.ShowResult();
+
+            var validator = new ResponseValidator(queryManager.Response);
+            validator.Evaluate();
 
             indexManager.DeleteIndex(client, IndexName);
             
