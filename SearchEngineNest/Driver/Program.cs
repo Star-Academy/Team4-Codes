@@ -1,4 +1,5 @@
 ﻿using System;
+using SearchEngineNestLib;
 
 namespace Driver
 {
@@ -6,7 +7,8 @@ namespace Driver
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var app = new App();
+            app.Start();
         }
     }
 }
