@@ -8,13 +8,12 @@ namespace SearchEngineNestLib
         private const string Path = "..\\EnglishData";
         public void Start()
         {
-            
-
             var clientCreator = new ClientConnector();
             var client = clientCreator.CreateClient();
 
             var indexManager = new IndexManager();
             indexManager.CreateIndex(client, IndexName);
+            indexManager.EvaluateResponse();
 
             var docReader = new DocReader();
             var docs = docReader.ReadAll(Path);
@@ -31,10 +30,12 @@ namespace SearchEngineNestLib
 
             var queryManager = new QueryManager(client, IndexName, inputProc);
             queryManager.SearchQuerry();
-            queryManager.ShowResult();
 
             var responseValidator = new ResponseValidator(queryManager.Response);
             responseValidator.Evaluate();
+
+            queryManager.ShowResult();
+
             indexManager.DeleteIndex(client, IndexName);
 
         }

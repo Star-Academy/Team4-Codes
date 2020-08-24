@@ -7,9 +7,10 @@ namespace SearchEngineNestLib
     public class IndexManager
     {
         private const string MyAnalizer = "myAnalizer";
+        private IResponse Response;
         public void CreateIndex(ElasticClient client, string indexName)
         {
-            var response = client.Indices.Create(indexName,
+            Response = client.Indices.Create(indexName,
                     s => s.Settings(settings => settings
                         .Analysis(analysis => analysis
                             .Analyzers(analyzer => analyzer
@@ -32,6 +33,11 @@ namespace SearchEngineNestLib
                         )
                     )
             );
+        }
+
+        public void EvaluateResponse(){
+            var responseValidator = new ResponseValidator(Response);
+            responseValidator.Evaluate();
         }
 
         public void DeleteIndex(ElasticClient client, string indexName)
