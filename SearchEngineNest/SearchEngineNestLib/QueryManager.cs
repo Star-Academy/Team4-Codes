@@ -61,6 +61,7 @@ namespace SearchEngineNestLib
             {
                 Console.Write(iHit.Source + " ");
             }
+            Console.WriteLine("");
         }
     }
 }

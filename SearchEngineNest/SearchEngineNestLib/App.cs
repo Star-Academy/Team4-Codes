@@ -32,7 +32,9 @@ namespace SearchEngineNestLib
             var queryManager = new QueryManager(client, IndexName, inputProc);
             queryManager.SearchQuerry();
             queryManager.ShowResult();
-            
+
+            var responseValidator = new ResponseValidator(queryManager.Response);
+            responseValidator.Evaluate();
             indexManager.DeleteIndex(client, IndexName);
 
         }
