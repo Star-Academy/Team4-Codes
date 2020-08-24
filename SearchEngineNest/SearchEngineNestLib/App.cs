@@ -8,11 +8,14 @@ namespace SearchEngineNestLib
         private const string Path = "..\\EnglishData";
         public void Start()
         {
+            
+
             var clientCreator = new ClientConnector();
             var client = clientCreator.CreateClient();
 
             var indexManager = new IndexManager();
             indexManager.CreateIndex(client, IndexName);
+
             var docReader = new DocReader();
             var docs = docReader.ReadAll(Path);
 
@@ -21,11 +24,15 @@ namespace SearchEngineNestLib
 
             client.Indices.Refresh(IndexName);
 
-            var queryManager = new QueryManager(client, IndexName);
-            List<string> mamad = new List<string> {"hello", "friend"};
-            queryManager.BoolAndMatchSample(mamad);
+            var stringInput = new ConsoleInput();
+
+            var inputProc = new InputProcessor(stringInput);
+            inputProc.Process();
+
+            var queryManager = new QueryManager(client, IndexName, inputProc);
+            queryManager.SearchQuerry();
             queryManager.ShowResult();
-            Console.WriteLine(queryManager.Response);
+            
             indexManager.DeleteIndex(client, IndexName);
 
         }

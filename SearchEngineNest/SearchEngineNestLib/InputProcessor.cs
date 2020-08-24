@@ -1,34 +1,36 @@
 using System;
+using System.Collections.Generic;
+
 namespace SearchEngineNestLib
 {
     public class InputProcessor
     {
         private readonly IUserInput inputFromUser;
-        public IKeywordList OrWords { get; } = new PlusSignKeyword();
-        public IKeywordList AndWords { get; } = new NoSignKeyword();
-        public IKeywordList RemoveWords { get; } = new MinusSignKeyword();
+        public List<string> OrWords { get; } = new List<string>();
+        public List<string> RemoveWords { get; } = new List<string>();
+        public List<string> AndWords { get; } = new List<string>();
 
 
-        public QueryProcessor(IUserInput userInput)
+        public InputProcessor(IUserInput userInput)
         {
             this.inputFromUser = userInput;
         }
         public void Process()
         {
-            string[] keywords = inputFromUser.ScanInput().Split(" ");
+            string[] keywords = inputFromUser.ScanInput().Split(' ');
             foreach (string keyword in keywords)
             {
                 if (keyword.StartsWith("+"))
                 {
-                    OrWords.Content.Add(keyword.Substring(1));
+                    OrWords.Add(keyword.Substring(1));
                 }
                 else if (keyword.StartsWith("-"))
                 {
-                    RemoveWords.Content.Add(keyword.Substring(1));
+                     RemoveWords.Add(keyword.Substring(1));
                 }
                 else
                 {
-                    AndWords.Content.Add(keyword);
+                     AndWords.Add(keyword);
                 }
             }
         }
