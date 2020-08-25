@@ -4,7 +4,7 @@ namespace SearchEngineNestLib
 {
     public class App
     {
-        public string IndexName = "english-docs";
+        public string IndexName = "English-docs";
         private const string Path = "..\\EnglishData";
         public void Start()
         {
@@ -29,7 +29,7 @@ namespace SearchEngineNestLib
             inputProc.Process();
 
             var queryManager = new QueryManager(client, IndexName, inputProc);
-            queryManager.SearchQuerry();
+            queryManager.SearchQuery();
 
             var responseValidator = new ResponseValidator(queryManager.Response);
             responseValidator.Evaluate();

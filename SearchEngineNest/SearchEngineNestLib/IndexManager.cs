@@ -1,7 +1,5 @@
 using Nest;
-using System.Collections.Generic;
 using SearchEngineNestLib.Models;
-using System;
 namespace SearchEngineNestLib
 {
     public class IndexManager
