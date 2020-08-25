@@ -1,7 +1,5 @@
 using System;
 using Nest;
-using System.Collections.Generic;
-using SearchEngineNestLib.Models;
 
 namespace SearchEngineNestLib
 {
