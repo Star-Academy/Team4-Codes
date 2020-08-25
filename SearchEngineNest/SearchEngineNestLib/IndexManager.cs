@@ -21,7 +21,7 @@ namespace SearchEngineNestLib
                 );
         }
 
-        private ITypeMapping CreateMapping(TypeMappingDescriptor<Person> mappingDescriptor)
+        private ITypeMapping CreateMapping(TypeMappingDescriptor<Document> mappingDescriptor)
         {
             return mappingDescriptor
                 .Properties(prp => prp
