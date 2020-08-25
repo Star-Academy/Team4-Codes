@@ -102,7 +102,7 @@ namespace ElasticLib
         {
             QueryContainer query = new MultiMatchQuery
             {
-                Fields = new string[] { "name", "email" },
+                Fields = new[] { "name", "email" },
                 Query = "deanne",
                 Analyzer = "standard",
                 Operator = Operator.Or,
