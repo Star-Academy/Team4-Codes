@@ -4,7 +4,7 @@ namespace SearchEngineNestLib
 {
     public class App
     {
-        public string IndexName = "English-docs";
+        public string IndexName = "english-docs";
         private const string Path = "..\\EnglishData";
         public void Start()
         {
