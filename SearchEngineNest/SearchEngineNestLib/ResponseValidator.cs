@@ -10,15 +10,15 @@ namespace SearchEngineNestLib
         {
             this.Response = response;
         }
-        public string Evaluate()
+        public void Evaluate()
         {
             if (Response.IsValid)
             {
-                return "slm bozqale hame chi okaye";
+                Console.WriteLine("slm bozqale hame chi okaye");
             }
             else
             {
-                return Response.DebugInformation;
+                Console.WritLine(Response.DebugInformation);
             }
         }
     }

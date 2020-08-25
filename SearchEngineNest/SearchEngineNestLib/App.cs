@@ -4,7 +4,7 @@ namespace SearchEngineNestLib
 {
     public class App
     {
-        public string IndexName = "English-docs";
+        public string IndexName = "english-docs";
         private const string Path = "..\\EnglishData";
         public void Start()
         {
@@ -13,7 +13,7 @@ namespace SearchEngineNestLib
 
             var indexManager = new IndexManager();
             indexManager.CreateIndex(client, IndexName);
-            Console.WriteLine(indexManager.EvaluateResponse());
+            indexManager.EvaluateResponse();
 
             var docReader = new DocReader();
             var docs = docReader.ReadAll(Path);
@@ -32,7 +32,7 @@ namespace SearchEngineNestLib
             queryManager.SearchQuery();
 
             var responseValidator = new ResponseValidator(queryManager.Response);
-            Console.WriteLine(responseValidator.Evaluate());
+            responseValidator.Evaluate();
 
             queryManager.ShowResult();
 

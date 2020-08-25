@@ -7,7 +7,7 @@ namespace ElasticLib
 {
     public class App
     {
-        public string IndexName = "index5";
+        private const string IndexName = "index5";
         private const string Path = "..\\Resources\\people.json";
         public void Start()
         {
