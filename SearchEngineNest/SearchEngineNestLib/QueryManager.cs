@@ -15,12 +15,12 @@ namespace SearchEngineNestLib
 
         public QueryManager(ElasticClient client, string indexName, InputProcessor inputProcessor)
         {
-            this.Client = client;
-            this.IndexName = indexName;
-            this.InputProc = inputProcessor;
+            Client = client;
+            IndexName = indexName;
+            InputProc = inputProcessor;
         }
 
-        public List<QueryContainer> StringListToQueryList(List<string> input){
+        public IEnumerable<QueryContainer> StringListToQueryList(IEnumerable<string> input){
             var output = new List<QueryContainer>();
             foreach(var word in input){
                 output.Add(
@@ -34,7 +34,7 @@ namespace SearchEngineNestLib
             return output;
         }
 
-        public void SearchQuerry()
+        public void SearchQuery()
         {
             QueryContainer query = new BoolQuery
             {

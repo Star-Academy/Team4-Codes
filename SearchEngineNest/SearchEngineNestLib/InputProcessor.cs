@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace SearchEngineNestLib
@@ -17,7 +16,7 @@ namespace SearchEngineNestLib
         }
         public void Process()
         {
-            string[] keywords = inputFromUser.ScanInput().Split(' ');
+            var keywords = inputFromUser.ScanInput().Split(' ');
             foreach (string keyword in keywords)
             {
                 if (keyword.StartsWith("+"))

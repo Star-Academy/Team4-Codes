@@ -1,7 +1,5 @@
 using System;
 using Nest;
-using System.Collections.Generic;
-using SearchEngineNestLib.Models;
 
 namespace SearchEngineNestLib
 {
@@ -12,15 +10,15 @@ namespace SearchEngineNestLib
         {
             this.Response = response;
         }
-        public void Evaluate()
+        public string Evaluate()
         {
             if (Response.IsValid)
             {
-                Console.WriteLine("slm bozqale hame chi okaye");
+                return "slm bozqale hame chi okaye";
             }
             else
             {
-                Console.WriteLine(Response.DebugInformation);
+                return Response.DebugInformation;
             }
         }
     }

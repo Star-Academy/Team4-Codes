@@ -13,7 +13,7 @@ namespace SearchEngineNestLib
 
             var indexManager = new IndexManager();
             indexManager.CreateIndex(client, IndexName);
-            indexManager.EvaluateResponse();
+            Console.WriteLine(indexManager.EvaluateResponse());
 
             var docReader = new DocReader();
             var docs = docReader.ReadAll(Path);
@@ -29,10 +29,10 @@ namespace SearchEngineNestLib
             inputProc.Process();
 
             var queryManager = new QueryManager(client, IndexName, inputProc);
-            queryManager.SearchQuerry();
+            queryManager.SearchQuery();
 
             var responseValidator = new ResponseValidator(queryManager.Response);
-            responseValidator.Evaluate();
+            Console.WriteLine(responseValidator.Evaluate());
 
             queryManager.ShowResult();
 

@@ -1,7 +1,6 @@
 using Nest;
-using System.Collections.Generic;
 using SearchEngineNestLib.Models;
-using System;
+
 namespace SearchEngineNestLib
 {
     public class IndexManager
@@ -35,9 +34,9 @@ namespace SearchEngineNestLib
             );
         }
 
-        public void EvaluateResponse(){
+        public string EvaluateResponse(){
             var responseValidator = new ResponseValidator(Response);
-            responseValidator.Evaluate();
+            return responseValidator.Evaluate();
         }
 
         public void DeleteIndex(ElasticClient client, string indexName)
