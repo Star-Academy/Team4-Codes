@@ -152,9 +152,9 @@ namespace ElasticLib
         }
         public void ShowResult()
         {
-            foreach (var iHit in Response.Hits)
+            foreach (var hit in Response.Hits)
             {
-                Console.WriteLine(iHit.Source);
+                Console.WriteLine(hit.Source);
             }
         }
     }
