@@ -6,6 +6,11 @@ namespace ElasticLib
 {
     public static class FieldDefiner
     {
+
+        private const string TextFieldName = "ngram";
+        private const string KeywordFieldName = "raw";
+        private const string MyAnalyzer = "myNgramAnalyzer";
+        
         public static PropertiesDescriptor<Person> AddAboutFieldMapping(this PropertiesDescriptor<Person> propertiesDescriptor)
         {
             return propertiesDescriptor
@@ -13,8 +18,8 @@ namespace ElasticLib
                     .Name(n => n.About)
                     .Fields(f => f
                         .Text(ng => ng
-                            .Name("ngram")
-                            .Analyzer("myNgramAnalyzer")
+                            .Name(TextFieldName)
+                            .Analyzer(MyAnalyzer)
                         )
                     )
                 );
@@ -43,11 +48,11 @@ namespace ElasticLib
                     .Name(n => n.Name)
                     .Fields(f => f
                         .Text(ng => ng
-                            .Name("ngram")
-                            .Analyzer("myNgramAnalyzer")
+                            .Name(TextFieldName)
+                            .Analyzer(MyAnalyzer)
                         )
                         .Keyword(ky => ky
-                            .Name("raw")
+                            .Name(KeywordFieldName)
                         )
                     )
                 );
@@ -68,11 +73,11 @@ namespace ElasticLib
                     .Name(n => n.Company)
                     .Fields(f => f
                         .Text(ng => ng
-                            .Name("ngram")
-                            .Analyzer("myNgramAnalyzer")
+                            .Name(TextFieldName)
+                            .Analyzer(MyAnalyzer)
                         )
                         .Keyword(ky => ky
-                            .Name("raw")
+                            .Name(KeywordFieldName)
                         )
                     )
                 );
@@ -101,8 +106,8 @@ namespace ElasticLib
                     .Name(n => n.Address)
                     .Fields(f => f
                         .Text(ng => ng
-                            .Name("ngram")
-                            .Analyzer("myNgramAnalyzer")
+                            .Name(TextFieldName)
+                            .Analyzer(MyAnalyzer)
                         )
                     )
                 );
@@ -115,8 +120,8 @@ namespace ElasticLib
                     .Name(p => p.RegisterationDate)
                     .Fields(f => f
                         .Text(ng => ng
-                            .Name("ngram")
-                            .Analyzer("myNgramAnalyzer")
+                            .Name(TextFieldName)
+                            .Analyzer(MyAnalyzer)
                         )
                     )
                 );

@@ -7,19 +7,22 @@ namespace ElasticLib
 {
     public class IndexManager
     {
+        private const string MyNgramFilter = "myNgramFilter";
+        private const string MyNgramAnalyzer = "myNgramAnalyzer";
+        
         private IPromise<IIndexSettings> CreateSettings(IndexSettingsDescriptor settingsDescriptor)
         {
             return settingsDescriptor
                 .Setting("max_ngram_diff", 8)
                 .Analysis(analysis => analysis
                     .TokenFilters(tf => tf
-                        .NGram("myNgramFilter", ng => ng
+                        .NGram(MyNgramFilter, ng => ng
                             .MinGram(7)
                             .MaxGram(15)))
                     .Analyzers(analyzer => analyzer
-                        .Custom("myNgramAnalyzer", custom => custom
+                        .Custom(MyNgramAnalyzer, custom => custom
                             .Tokenizer("standard")
-                            .Filters("lowercase", "myNgramFilter")
+                            .Filters("lowercase", MyNgramFilter)
                         )
                     )
                 );

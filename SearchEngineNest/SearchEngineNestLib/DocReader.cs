@@ -11,8 +11,8 @@ namespace SearchEngineNestLib
             var output = new List<Document>();
             foreach (string file in Directory.EnumerateFiles(path))
             {
-                string contents = File.ReadAllText(file).ToLower();
-                output.Add(new Document{ID = Path.GetFileName(file), Content = contents});
+                string content = File.ReadAllText(file);
+                output.Add(new Document{Id = Path.GetFileName(file), Content = content});
             }
             return output;
         }

@@ -26,7 +26,7 @@ namespace SearchEngineNestLib
             return mappingDescriptor
                 .Properties(prp => prp
                     .Keyword(t => t
-                        .Name(n => n.ID)
+                        .Name(n => n.Id)
                     )
                     .Text(t => t
                         .Name(n => n.Content)
@@ -50,7 +50,7 @@ namespace SearchEngineNestLib
 
         public void DeleteIndex(ElasticClient client, string indexName)
         {
-            var deleteRespones = client.Indices.Delete(indexName);
+            var deleteResponse = client.Indices.Delete(indexName);
         }
     }
 }

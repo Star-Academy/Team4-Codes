@@ -60,9 +60,6 @@ namespace ElasticLib.Models
             }
         } 
 
-        public void x (){
-            this.Location = "mahdi";
-        }
         public override string ToString(){
             return "Name: " + this.Name + "\n"
             + "Age: " + this.Age + "\n"

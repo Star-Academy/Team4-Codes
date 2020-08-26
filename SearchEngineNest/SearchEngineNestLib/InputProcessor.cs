@@ -5,9 +5,9 @@ namespace SearchEngineNestLib
     public class InputProcessor
     {
         private readonly IUserInput inputFromUser;
-        public List<string> OrWords { get; } = new List<string>();
-        public List<string> RemoveWords { get; } = new List<string>();
-        public List<string> AndWords { get; } = new List<string>();
+        public HashSet<string> OrWords { get; } = new HashSet<string>();
+        public HashSet<string> RemoveWords { get; } = new HashSet<string>();
+        public HashSet<string> AndWords { get; } = new HashSet<string>();
 
 
         public InputProcessor(IUserInput userInput)

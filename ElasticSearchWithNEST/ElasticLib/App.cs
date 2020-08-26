@@ -23,7 +23,7 @@ namespace ElasticLib
             var bulker = new Bulker();
             bulker.Bulk(client, IndexName, people);
 
-            var chert = client.Indices.Refresh(IndexName);
+            client.Indices.Refresh(IndexName);
 
             var queryManager = new QueryManager(client, IndexName);
             

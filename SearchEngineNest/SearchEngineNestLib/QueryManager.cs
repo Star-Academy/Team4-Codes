@@ -21,17 +21,12 @@ namespace SearchEngineNestLib
         }
 
         public IEnumerable<QueryContainer> StringListToQueryList(IEnumerable<string> input){
-            var output = new List<QueryContainer>();
-            foreach(var word in input){
-                output.Add(
-                    new MatchQuery
-                    {
-                        Field = "content",
-                        Query = word
-                    }
-                );
-            }
-            return output;
+            return input.Select(word => new MatchQuery
+            {
+                Field = "content",
+                Query = word
+            })
+            .ToList();
         }
 
         public void SearchQuery()
@@ -57,9 +52,9 @@ namespace SearchEngineNestLib
         public void ShowResult()
         {
             Console.WriteLine("{0} Results Found: ",Response.Hits.Count);
-            foreach (var iHit in Response.Hits)
+            foreach (var hit in Response.Hits)
             {
-                Console.Write(iHit.Source + " ");
+                Console.Write(hit.Source + " ");
             }
             Console.WriteLine("");
         }

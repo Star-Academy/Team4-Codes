@@ -6,10 +6,10 @@ namespace ElasticLib
 {
     public class Bulker
     {
-        public void Bulk(ElasticClient client, string indexName, List<Person> documents)
+        public void Bulk(ElasticClient client, string indexName, List<Person> people)
         {
             var bulkDescriptor = new BulkDescriptor();
-            foreach (var person in documents)
+            foreach (var person in people)
             {
                 bulkDescriptor.Index<Person>(x => x
                     .Index(indexName)

@@ -12,7 +12,9 @@ namespace ElasticLib
         {
             var uri = new Uri("http://localhost:9200");
             var connectionSettings = new ConnectionSettings(uri);
+#if DEBUG
             connectionSettings.EnableDebugMode();
+#endif
             var client = new ElasticClient(connectionSettings);
             var response = client.Ping();
             Console.WriteLine(response);
