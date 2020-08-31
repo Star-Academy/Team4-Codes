@@ -2,6 +2,7 @@ using SearchEngineNestLib.Models;
 using System.Collections.Generic;
 using Nest;
 using System;
+using System.Linq;
 
 namespace SearchEngineNestLib
 {
@@ -20,13 +21,15 @@ namespace SearchEngineNestLib
             InputProc = inputProcessor;
         }
 
-        public IEnumerable<QueryContainer> StringListToQueryList(IEnumerable<string> input){
-            return input.Select(word => new MatchQuery
-            {
-                Field = "content",
-                Query = word
-            })
-            .ToList();
+        public IEnumerable<QueryContainer> StringListToQueryList(IEnumerable<string> input)
+        {
+            return input.Select(word =>
+                (QueryContainer) new MatchQuery
+                {
+                    Field = "content",
+                    Query = word
+                }
+            );
         }
 
         public void SearchQuery()
@@ -51,7 +54,7 @@ namespace SearchEngineNestLib
         }
         public void ShowResult()
         {
-            Console.WriteLine("{0} Results Found: ",Response.Hits.Count);
+            Console.WriteLine("{0} Results Found: ", Response.Hits.Count);
             foreach (var hit in Response.Hits)
             {
                 Console.Write(hit.Source + " ");
