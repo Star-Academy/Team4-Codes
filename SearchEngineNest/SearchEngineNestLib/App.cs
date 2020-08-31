@@ -12,14 +12,15 @@ namespace SearchEngineNestLib
             var client = clientCreator.CreateClient();
 
             var indexManager = new IndexManager();
-            indexManager.CreateIndex(client, IndexName);
-            indexManager.EvaluateResponse();
-
-            var docReader = new DocReader();
-            var docs = docReader.ReadAll(Path);
-
-            var bulker = new Bulker();
-            bulker.Bulk(client, IndexName, docs);
+            if (!client.Indices.Exists(IndexName).Exists)
+            {
+                indexManager.CreateIndex(client, IndexName);
+                indexManager.EvaluateResponse();
+                var docReader = new DocReader();
+                var docs = docReader.ReadAll(Path);
+                var bulker = new Bulker();
+                bulker.Bulk(client, IndexName, docs);
+            }
 
             client.Indices.Refresh(IndexName);
 
@@ -35,8 +36,6 @@ namespace SearchEngineNestLib
             responseValidator.Evaluate();
 
             queryManager.ShowResult();
-
-            indexManager.DeleteIndex(client, IndexName);
 
         }
     }
