@@ -10,14 +10,10 @@ namespace SearchEngineNestLib
         {
             this.Response = response;
         }
-        public void Evaluate()
-        {
-            if (Response.IsValid && Response.ApiCall.HttpStatusCode >= 200 && Response.ApiCall.HttpStatusCode < 300)
-            {
-                Console.WriteLine("slm bozqale hame chi okaye");
-            }
 
-            else
+        public void CheckApiCall()
+        {
+            if(Response.ApiCall.OriginalException != null)
             {
                 if(Response.ApiCall.HttpStatusCode == 404){
                     Console.WriteLine("Index not found");
@@ -35,6 +31,23 @@ namespace SearchEngineNestLib
                     Console.WriteLine("Bad Request");
                 }
                 throw  Response.ApiCall.OriginalException;
+            }
+        }
+
+        public void CheckClientExceptions()
+        {
+            if(Response.OriginalException != null)
+            {
+                throw Response.OriginalException;
+            }
+        }
+
+        public void Evaluate()
+        {
+            if (!(Response.IsValid && Response.ApiCall.HttpStatusCode >= 200 && Response.ApiCall.HttpStatusCode < 300))
+            {
+                CheckApiCall();
+                CheckClientExceptions();
             }
         }
     }
