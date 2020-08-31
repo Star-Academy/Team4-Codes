@@ -54,12 +54,11 @@ namespace SearchEngineNestLib
         }
         public void ShowResult()
         {
-            Console.WriteLine("{0} Results Found: ", Response.Hits.Count);
+            Console.WriteLine(Consts.ResultMessage, Response.Hits.Count);
             foreach (var hit in Response.Hits)
             {
-                Console.Write(hit.Source + " ");
+                Console.Write(hit.Source + Consts.ResultSplitter);
             }
-            Console.WriteLine("");
         }
     }
 }

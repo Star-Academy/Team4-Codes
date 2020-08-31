@@ -5,7 +5,7 @@ namespace SearchEngineNestLib
     {
         public string ScanInput()
         {
-            Console.WriteLine("\nEnter string to search");
+            Console.WriteLine(Consts.InputMessage);
             return Console.ReadLine();
         }
     }

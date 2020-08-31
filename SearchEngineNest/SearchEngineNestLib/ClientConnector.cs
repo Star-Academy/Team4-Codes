@@ -6,7 +6,7 @@ namespace SearchEngineNestLib
     public class ClientConnector
     {
         public ElasticClient CreateClient(){
-            var uri = new Uri("http://localhost:9200");
+            var uri = new Uri(Consts.ClientUri);
             var connectionSettings = new ConnectionSettings(uri);
 #if DEBUG
             connectionSettings.EnableDebugMode();

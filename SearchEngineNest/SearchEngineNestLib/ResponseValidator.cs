@@ -16,19 +16,19 @@ namespace SearchEngineNestLib
             if(Response.ApiCall.OriginalException != null)
             {
                 if(Response.ApiCall.HttpStatusCode == 404){
-                    Console.WriteLine("Index not found");
+                    Console.WriteLine(Consts.Error404);
                 }
                 else if (Response.ApiCall.HttpStatusCode == 403)
                 {
-                    Console.WriteLine("Index is read only");
+                    Console.WriteLine(Consts.Error403);
                 }
                 else if (Response.ApiCall.HttpStatusCode == 409)
                 {
-                    Console.WriteLine("Conflict in indices");
+                    Console.WriteLine(Consts.Error409);
                 }
                 else if (Response.ApiCall.HttpStatusCode == 400)
                 {
-                    Console.WriteLine("Bad Request");
+                    Console.WriteLine(Consts.Error400);
                 }
                 throw  Response.ApiCall.OriginalException;
             }

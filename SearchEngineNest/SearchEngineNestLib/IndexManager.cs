@@ -14,8 +14,8 @@ namespace SearchEngineNestLib
                 .Analysis(analysis => analysis
                     .Analyzers(analyzer => analyzer
                         .Custom(MyAnalizer, custom => custom
-                            .Tokenizer("standard")
-                            .Filters("lowercase")
+                            .Tokenizer(Consts.StandardTokenizer)
+                            .Filters(Consts.LowercaseFilter)
                         )
                     )
                 );
