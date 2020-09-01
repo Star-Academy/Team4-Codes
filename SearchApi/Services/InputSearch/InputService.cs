@@ -6,7 +6,7 @@ namespace SearchApi.Services.InputSearch
 {
     public class InputService : IInputService
     {
-        public List<string> SearchResult(Input input)
+        public IEnumerable<string> SearchResult(Input input)
         {
             input.Process();
             var query = new QueryManager(input);
