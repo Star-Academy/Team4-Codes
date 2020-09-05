@@ -9,16 +9,16 @@ namespace SearchApi.Controllers
     [Route("[controller]")]
     public class SearchController : ControllerBase
     {
-        private readonly IInputService InputService;
+        private readonly IInputService inputService;
         public SearchController(IInputService inputService)
         {
-            InputService = inputService;
+            this.inputService = inputService;
         }
 
         [HttpPost]
         public IActionResult InputUser(Input userInput)
         {
-            return Ok(InputService.SearchResult(userInput));
+            return Ok(inputService.SearchResult(userInput));
         }
     }
 }
