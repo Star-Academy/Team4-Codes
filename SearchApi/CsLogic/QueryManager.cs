@@ -11,8 +11,8 @@ namespace SearchApi.CsLogic
     {
         private ElasticClient Client = new ClientConnector().CreateClient();
         private readonly string IndexName = "english-docs";
-        public ISearchResponse<Document> Response { get; set; }
-        public Input InputProc;
+        private ISearchResponse<Document> Response { get; set; }
+        private Input InputProc;
 
         public QueryManager(Input inputProcessor)
         {
