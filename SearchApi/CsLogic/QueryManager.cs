@@ -10,7 +10,7 @@ namespace SearchApi.CsLogic
     public class QueryManager
     {
         private ElasticClient Client = new ClientConnector().CreateClient();
-        private readonly string IndexName = "english-docs";
+        private const string IndexName = "english-docs";
         private ISearchResponse<Document> Response { get; set; }
         private Input InputProc;
 

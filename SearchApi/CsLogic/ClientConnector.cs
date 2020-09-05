@@ -5,7 +5,7 @@ namespace SearchApi.CsLogic
 {
     public class ClientConnector
     {
-        private readonly string clientUri = "http://localhost:9200";
+        private const string clientUri = "http://localhost:9200";
         public ElasticClient CreateClient(){
             var uri = new Uri(clientUri);
             var connectionSettings = new ConnectionSettings(uri);
