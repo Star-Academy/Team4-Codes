@@ -12,7 +12,7 @@ namespace SearchApi.Controllers
     [Route("[controller]")]
     public class SearchController : ControllerBase
     {
-        private readonly IInputService _inputService;
+        private readonly IInputService inputService;
         public SearchController(IInputService inputService)
         {
             _inputService = inputService;
