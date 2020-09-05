@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/search-result-style.css">
+    <link rel="stylesheet" href="styles/help-popup.css">
+</head>
+<body onload="getSearchQuery()">
+<div>
+    <div class="result-page-head-container">
+        <div class="result-page-title">
+            <h2>SAT4</h2>
+        </div>
+        <div class="result-search-bar-container">
+            <form  id="result-page-search-form">
+                <label>
+                    <input type="text" name="searchInput" placeholder="Search..." id="result-page-search-bar"/>
+                </label>
+                <button type="submit" id="result-page-search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+    </div>
+    <div id="search-results">
+        <span id="results-count" class="results-count">There are 200 Results</span>
+        <ul>
+            <li>Result1</li>
+            <li>Result1</li>
+            <li>Result1</li>
+            <li>Result1</li>
+        </ul>
+    </div>
+    <div class="footer-container">
+        <footer>
+            <a id="help-popup">How to Search</a>
+            <span>Powered by Elastic Search</span>
+        </footer>
+    </div>
+    <div id="help-modal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+    <script src="scripts/helpPopupScript.js"></script>
+    <script src="scripts/apiConnections.js"></script>
+</div>
+</body>
+</html>
