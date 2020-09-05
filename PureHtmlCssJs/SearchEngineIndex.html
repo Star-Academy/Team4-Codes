@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/home-page.css">
     <link rel="stylesheet" href="styles/help-popup.css">
+    <link rel="stylesheet" href="styles/search-result-style.css">
     <title>Search Engine</title>
 </head>
 <body>
@@ -20,11 +21,11 @@
     </header>
 </div>
 <div class="home-page-search-form-container">
-    <form method="post" id="home-page-search-form" onsubmit="sendSearchQuery()">
+    <form id="home-page-search-form" method="get" action="ResultPage.html">
         <label>
-            <input type="text" name="searchInput" placeholder="Search..." id="home-page-search-bar"/>
+            <input type="text" name="search" placeholder="Search..." id="home-page-search-bar" value=""/>
         </label>
-        <button type="submit" id="home-page-submit-button">
+        <button type="button" id="home-page-submit-button">
             <i class="fas fa-search"></i>
         </button>
     </form>

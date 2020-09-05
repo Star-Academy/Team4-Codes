@@ -8,44 +8,46 @@
     <link rel="stylesheet" href="styles/search-result-style.css">
     <link rel="stylesheet" href="styles/help-popup.css">
 </head>
-<body>
-<div class="result-page-head-container">
-<div class="result-page-title">
-    <h2 >SAT4</h2>
-</div>
-<div class="result-search-bar-container">
-    <form method="post" action="ResultPage.html" id="result-page-search-form">
-        <label>
-            <input type="text" name="searchInput" placeholder="Search..." id="result-page-search-bar"/>
-        </label>
-        <button type="submit" id="result-page-search-button"><i class="fas fa-search"></i></button>
-    </form>
-</div>
+<body onload="getSearchQuery()">
+<div>
+    <div class="result-page-head-container">
+        <div class="result-page-title">
+            <h2>SAT4</h2>
+        </div>
+        <div class="result-search-bar-container">
+            <form  id="result-page-search-form">
+                <label>
+                    <input type="text" name="searchInput" placeholder="Search..." id="result-page-search-bar"/>
+                </label>
+                <button type="submit" id="result-page-search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
 
-</div>
-<div id="search-results">
-    <span id="results-count" class="results-count">There are 200 Results</span>
-    <ul>
-        <li>Result1</li>
-        <li>Result1</li>
-        <li>Result1</li>
-        <li>Result1</li>
-    </ul>
-</div>
-<div class="footer-container">
-    <footer>
-        <a id="help-popup">How to Search</a>
-        <span>Powered by Elastic Search</span>
-    </footer>
-</div>
-<div id="help-modal" class="modal">
+    </div>
+    <div id="search-results">
+        <span id="results-count" class="results-count">There are 200 Results</span>
+        <ul>
+            <li>Result1</li>
+            <li>Result1</li>
+            <li>Result1</li>
+            <li>Result1</li>
+        </ul>
+    </div>
+    <div class="footer-container">
+        <footer>
+            <a id="help-popup">How to Search</a>
+            <span>Powered by Elastic Search</span>
+        </footer>
+    </div>
+    <div id="help-modal" class="modal">
 
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+    <script src="scripts/helpPopupScript.js"></script>
+    <script src="scripts/apiConnections.js"></script>
 </div>
-<script src="scripts/helpPopupScript.js"></script>
-
 </body>
 </html>
