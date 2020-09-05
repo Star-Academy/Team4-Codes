@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.Logging;
 using SearchApi.Models;
 using SearchApi.CsLogic;
 using SearchApi.Services.InputSearch;
@@ -12,16 +9,16 @@ namespace SearchApi.Controllers
     [Route("[controller]")]
     public class SearchController : ControllerBase
     {
-        private readonly IInputService _inputService;
+        private readonly IInputService InputService;
         public SearchController(IInputService inputService)
         {
-            _inputService = inputService;
+            InputService = inputService;
         }
 
         [HttpPost]
         public IActionResult InputUser(Input userInput)
         {
-            return Ok(_inputService.SearchResult(userInput));
+            return Ok(InputService.SearchResult(userInput));
         }
     }
 }
