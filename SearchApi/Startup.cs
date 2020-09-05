@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SearchApi.Services.InputSearch;
+using Nest;
 
 namespace SearchApi
 {
@@ -29,6 +30,8 @@ namespace SearchApi
             services.AddCors();
             services.AddControllers();
             services.AddScoped<IInputService, InputService>();
+            services.AddSingleton<IElasticClient>(
+                elasticClient => new ElasticClient(ElasticConnectionSettings.GetSettings()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

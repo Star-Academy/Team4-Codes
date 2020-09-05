@@ -15,13 +15,13 @@ namespace SearchApi.Controllers
         private readonly IInputService inputService;
         public SearchController(IInputService inputService)
         {
-            _inputService = inputService;
+            this.inputService = inputService;
         }
 
         [HttpPost]
         public IActionResult InputUser(Input userInput)
         {
-            return Ok(_inputService.SearchResult(userInput));
+            return Ok(inputService.SearchResult(userInput));
         }
     }
 }
