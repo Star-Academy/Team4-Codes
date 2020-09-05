@@ -20,7 +20,7 @@
     </header>
 </div>
 <div class="home-page-search-form-container">
-    <form method="post" action="ResultPage.html" id="home-page-search-form">
+    <form method="post" id="home-page-search-form" onsubmit="sendSearchQuery()">
         <label>
             <input type="text" name="searchInput" placeholder="Search..." id="home-page-search-bar"/>
         </label>
@@ -43,6 +43,7 @@
     </div>
 </div>
 <script src="scripts/helpPopupScript.js"></script>
+<script src="scripts/apiConnections.js"></script>
 
 </body>
 </html>
