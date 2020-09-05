@@ -12,7 +12,7 @@ namespace SearchApi.Models
         public void Process()
         {
             var keywords = Words.Split(' ');
-            foreach (string keyword in keywords)
+            foreach (var keyword in keywords)
             {
                 if (keyword.StartsWith("+"))
                 {
