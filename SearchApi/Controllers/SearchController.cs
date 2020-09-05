@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.Logging;
 using SearchApi.Models;
 using SearchApi.CsLogic;
 using SearchApi.Services.InputSearch;
