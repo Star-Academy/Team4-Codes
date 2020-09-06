@@ -7,18 +7,15 @@ using System.Linq;
 
 namespace SearchApi.CsLogic
 {
-    public class QueryManager
+    public class QueryManager : IQueryManager
     {
-
-        //sth reeeeealy funny
-        private ElasticClient Client = new ClientConnector().CreateClient();
+        private IElasticClient Client;
         private const string IndexName = "english-docs";
         private ISearchResponse<Document> Response { get; set; }
-        private Input InputProc;
 
-        public QueryManager(Input inputProcessor)
+        public QueryManager(IElasticClient client)
         {
-            InputProc = inputProcessor;
+            Client = client;
         }
 
         public IEnumerable<QueryContainer> StringListToQueryList(IEnumerable<string> input)
@@ -32,19 +29,19 @@ namespace SearchApi.CsLogic
             );
         }
 
-        public void SearchQuery()
+        public void SearchQuery(Input input)
         {
             QueryContainer query = new BoolQuery
             {
                 Should = new List<QueryContainer> {
                     new BoolQuery{
-                        Must = StringListToQueryList(InputProc.AndWords)
+                        Must = StringListToQueryList(input.AndWords)
                     },
                     new BoolQuery{
-                        Should = StringListToQueryList(InputProc.OrWords)
+                        Should = StringListToQueryList(input.OrWords)
                     }
                 },
-                MustNot = StringListToQueryList(InputProc.RemoveWords)
+                MustNot = StringListToQueryList(input.RemoveWords)
             };
 
             Response = Client.Search<Document>(s => s

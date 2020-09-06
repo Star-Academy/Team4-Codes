@@ -6,12 +6,17 @@ namespace SearchApi.Services.InputSearch
 {
     public class InputService : IInputService
     {
+        IQueryManager QueryManager;
+
+        public InputService(IQueryManager queryManager){
+            QueryManager = queryManager;
+        }
+        
         public IEnumerable<string> SearchResult(Input input)
         {
             input.Process();
-            var query = new QueryManager(input);
-            query.SearchQuery();
-            return query.QueryResult();
+            QueryManager.SearchQuery(input);
+            return QueryManager.QueryResult();
         }
     }
 }
