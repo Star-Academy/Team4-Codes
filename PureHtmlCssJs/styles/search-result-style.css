@@ -31,9 +31,6 @@ body {
     display: flex;
 }
 
-.result-page-head-container label {
-    width: 40%;
-}
 
 .result-search-bar-container input[type = text] {
     height: 35px;
@@ -46,6 +43,10 @@ body {
     font-size: 17px;
 }
 
+.result-page-head-container label {
+    width: 40%;
+}
+
 .result-page-head-container button {
     border: none;
     outline : none;
@@ -56,6 +57,7 @@ body {
     color: #555555;
     font-size: 18px;
 }
+
 .results-count{
     font-size: 12px;
 }

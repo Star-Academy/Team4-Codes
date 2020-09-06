@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'mathletebulky';
+    src: url('assets/mathlete/mathlete-bulky-webfont.woff2') format('woff2'),
+         url('assets/mathlete/mathlete-bulky-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
