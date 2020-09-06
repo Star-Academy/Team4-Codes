@@ -4,11 +4,11 @@ function sendSearchQuery(val) {
     };
 
     console.log("jgi jigi ");
-    
+
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(this.response);
+            displayResults(this.response);
         }
     };
     xhttp.open('POST', 'https://localhost:5001/search');
@@ -18,8 +18,9 @@ function sendSearchQuery(val) {
 }
 
 function getSearchQuery() {
-    document.getElementById("result-page-search-bar").value = window.location.search.substring(8);
-    sendSearchQuery(window.location.search.substring(8));
+    let params = new URLSearchParams(window.location.search.substring(1));
+    document.getElementById("result-page-search-bar").value = params.get("search");
+    sendSearchQuery(params.get("search"));
 }
 
 function displayResults(searchResults) {

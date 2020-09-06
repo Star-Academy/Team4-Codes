@@ -25,6 +25,7 @@ body {
     display: inline-block;
     margin-left: 20px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .result-search-bar-container form {
@@ -37,6 +38,7 @@ body {
 
 .result-search-bar-container input[type = text] {
     height: 35px;
+    outline : none;
     border: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -47,6 +49,7 @@ body {
 
 .result-page-head-container button {
     border: none;
+    outline : none;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #ffffff;
