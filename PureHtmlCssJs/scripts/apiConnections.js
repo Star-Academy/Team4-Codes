@@ -3,8 +3,6 @@ function sendSearchQuery(val) {
         words: val
     };
 
-    console.log("jgi jigi ");
-
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -24,7 +22,7 @@ function getSearchQuery() {
 }
 
 function displayResults(searchResults) {
-    let template = `<span id="results-count" class="results-count">There are ${searchResults.length} Results</span>
+    let template = `<span id="results-count" class="results-count">${searchResults.length === 0 ? "There is no result" : `There are ${searchResults.length} Results`}</span>
         <ul>`;
     for (const result of searchResults) {
         template += `<li>${result}</li>`;
