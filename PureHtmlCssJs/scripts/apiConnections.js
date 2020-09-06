@@ -1,7 +1,6 @@
 function sendSearchQuery(val) {
-    const value = val;
     const request = {
-        words: value
+        words: val
     };
 
     console.log("jgi jigi ");
@@ -12,7 +11,7 @@ function sendSearchQuery(val) {
             console.log(this.response);
         }
     };
-    xhttp.open('POST', 'https://localhost:5000/search');
+    xhttp.open('POST', 'https://localhost:5001/search');
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.responseType = 'json';
     xhttp.send(JSON.stringify(request));
