@@ -1,6 +1,5 @@
-import { FooterComponent } from './../footer/footer.component';
 import { Component, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import {  MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-help',
   templateUrl: './help.component.html',
