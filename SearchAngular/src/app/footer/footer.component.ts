@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import {HelpComponent} from 'src/app/help/help.component';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { HelpComponent } from 'src/app/help/help.component';
+import { MatDialogRef } from "@angular/material/dialog";
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,7 +9,9 @@ import {HelpComponent} from 'src/app/help/help.component';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog) { }
+
+  private dialogRef: MatDialogRef<HelpComponent>;
 
   ngOnInit(): void {
   }
@@ -20,7 +23,11 @@ export class FooterComponent implements OnInit {
     dialogConfig.autoFocus = true;
 
     this.dialog.open(HelpComponent, dialogConfig);
-}
+  }
+
+  close() {
+    this.dialogRef.close();
+  }
 
 
 }

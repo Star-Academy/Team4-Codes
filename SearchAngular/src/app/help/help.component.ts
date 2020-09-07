@@ -1,17 +1,18 @@
+import { FooterComponent } from './../footer/footer.component';
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from "@angular/material/dialog";
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-help',
   templateUrl: './help.component.html',
   styleUrls: ['./help.component.scss']
 })
 export class HelpComponent implements OnInit {
-  private dialogRef: MatDialogRef<HelpComponent>;
+  constructor(private dialogRef: MatDialogRef<HelpComponent>) { }
 
   ngOnInit(): void {
   }
 
-  close() {
+  clickClose() {
     this.dialogRef.close();
   }
 
