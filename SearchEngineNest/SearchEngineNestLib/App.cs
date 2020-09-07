@@ -7,7 +7,7 @@ namespace SearchEngineNestLib
         public string IndexName = "english-docs";
         private const string Path = "..\\EnglishData";
 
-        private void CreateAndInitIndexByPath(string indexName, string path){
+        private void CreateAndInitIndexByPath(string indexName, string path, ElasticClient client){
             var indexManager = new IndexManager();
             if (!client.Indices.Exists(IndexName).Exists)
             {
@@ -24,7 +24,7 @@ namespace SearchEngineNestLib
         {
             var client = new ClientConnector().CreateClient();
 
-            CreateAndInitIndexByPath(IndexName, Path);
+            CreateAndInitIndexByPath(IndexName, Path, client);
 
             var inputProc = new InputProcessor(new ConsoleInput());
             inputProc.Process();
