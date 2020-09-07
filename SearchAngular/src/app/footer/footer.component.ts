@@ -11,8 +11,6 @@ export class FooterComponent implements OnInit {
 
   constructor(private dialog: MatDialog) { }
 
-  private dialogRef: MatDialogRef<HelpComponent>;
-
   ngOnInit(): void {
   }
   openDialog() {
@@ -23,10 +21,6 @@ export class FooterComponent implements OnInit {
     dialogConfig.autoFocus = true;
 
     this.dialog.open(HelpComponent, dialogConfig);
-  }
-
-  close() {
-    this.dialogRef.close();
   }
 
 
