@@ -1,4 +1,4 @@
-<div class="home-page-search-form-container result-search-bar-container">
+<div [ngClass]="style === 'light' ? 'result-search-bar-container':'home-page-search-form-container'">
     <form id="search-form">
         <label>
             <input type="text" name="search" placeholder="Search..." id="search-bar" value=""/>

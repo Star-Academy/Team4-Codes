@@ -7,9 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
-
-  @Input('class')
-  public klass: string
+  @Input() style : 'dark' | 'light' = 'dark';
   searchIcon = faSearch;
 
   constructor() { }

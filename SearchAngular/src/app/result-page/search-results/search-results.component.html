@@ -1,3 +1,6 @@
 <div id="search-results">
     <span id="results-count" class="results-count">There is no result</span>
+    <ul>
+        <app-result-item *ngFor="let result of results" [resultItem]="result"></app-result-item>
+    </ul>
 </div>
