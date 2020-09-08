@@ -12,7 +12,7 @@ export class SearchBarComponent implements OnInit {
   @Output()
   public searched = new EventEmitter<string>();
   searchIcon = faSearch;
-  public value;
+  public value = '';
 
   constructor(
     private router: Router  ) {}
@@ -22,7 +22,7 @@ export class SearchBarComponent implements OnInit {
 
   public onSubmit() : void{
     this.searched.emit(this.value);
-    this.router.navigate(['/result']);
+    this.router.navigate(['/result', {words: this.value}]);
   }
 
 }
