@@ -11,10 +11,9 @@ export class ResultPageHeadComponent implements OnInit {
   @Output() searchEvent = new EventEmitter<string>();
   constructor() { }
 
-  @Input() sth;
+  @Input() carrier;
 
   ngOnInit(): void {
-    console.log(this.sth);
   }
   searchWord(word:string): void {
     this.searchEvent.next(word);
