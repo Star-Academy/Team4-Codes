@@ -1,5 +1,6 @@
 <div id="search-results">
-    <span id="results-count" class="results-count">There is no result</span>
+    <span id="results-count"
+        class="results-count">{{results.length===0 ? 'No Result Found' : 'There is ' + results.length + ' result'}}</span>
     <ul>
         <app-result-item *ngFor="let result of results" [resultItem]="result"></app-result-item>
     </ul>

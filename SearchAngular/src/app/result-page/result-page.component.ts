@@ -11,8 +11,8 @@ export class ResultPageComponent implements OnInit {
   constructor(private service: ResultService) { }
 
   async ngOnInit(): Promise<void> {
-    this.searchWord('hello friend');
   }
+
   public async searchWord(word: string) {
     this.results = await this.service.getResults(word);
   }

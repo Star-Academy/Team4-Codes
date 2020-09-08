@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +9,13 @@ export class HomePageComponent implements OnInit {
 
   constructor() { }
 
+  @Output() searchEvent = new EventEmitter<string>();
+
   ngOnInit(): void {
+  }
+
+  public async searchWord(word: string) {
+    this.searchEvent.toString;
   }
 
 }
