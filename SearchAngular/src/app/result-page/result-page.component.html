@@ -1,4 +1,4 @@
 <div class = "result-page-container">
-    <app-result-page-head></app-result-page-head>
+    <app-result-page-head (searchEvent)="searchWord($event)"></app-result-page-head>
     <app-search-results [results]="results"></app-search-results>
 </div>

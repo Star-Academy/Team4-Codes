@@ -10,8 +10,10 @@ export class ResultPageComponent implements OnInit {
   public results: string[];
   constructor(private service: ResultService) { }
 
-  ngOnInit(): void {
-    // this.results = this.service.getResults('hello');
+  async ngOnInit(): Promise<void> {
+    this.searchWord('hello friend');
   }
-
+  public async searchWord(word: string) {
+    this.results = await this.service.getResults(word);
+  }
 }

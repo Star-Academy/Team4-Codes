@@ -1,7 +1,7 @@
 <div class="search-bar-wrapper" [ngClass]="style === 'light' ? 'result-search-bar-container':'home-page-search-form-container'">
-    <form id="search-form">
+    <form #showSubmit="ngForm" id="search-form" (ngSubmit)="onSubmit()">
         <label>
-            <input type="text" name="search" placeholder="Search..." id="search-bar" value=""/>
+            <input type="text" name="search" placeholder="Search..." id="search-bar" value="" [(ngModel)]="value"/>
         </label>
         <button type="submit" id="submit-button">
             <fa-icon [icon] = 'searchIcon' ></fa-icon>

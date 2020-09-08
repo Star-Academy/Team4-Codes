@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {ResultPageComponent} from '../result-page.component';
 
 @Component({
   selector: 'app-result-page-head',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultPageHeadComponent implements OnInit {
 
+  @Output() searchEvent = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  searchWord(word:string): void {
+    this.searchEvent.next(word);
+  }
 }

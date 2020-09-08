@@ -5,10 +5,11 @@ export class ResultService {
     constructor(private http: HttpClient) {
 
     }
-    public getResults(searchKey: string): string[] {
-        this.http.post('http://localhost:5000/search', { words: searchKey }).subscribe((result: string[]) =>
-            console.log(result)
-        );
-        return [];
+    public async getResults(searchKey: string): Promise<string[]> {
+        return new Promise<string[]>((resolve) => {
+            this.http.post('https://localhost:5001/search', { words: searchKey }).subscribe((result: string[]) => {
+                resolve(result);
+            });
+        });
     }
 }

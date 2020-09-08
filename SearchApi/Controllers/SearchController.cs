@@ -8,7 +8,7 @@ namespace SearchApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [EnableCors("AllowAllOrigin")]
+    // [EnableCors("AllowAllOrigin")]
     public class SearchController : ControllerBase
     {
         private readonly IInputService inputService;

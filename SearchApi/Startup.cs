@@ -20,11 +20,8 @@ namespace SearchApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAllOrigin",
-                    builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            });
+            services.AddCors();
+            
             services.AddControllers();
             services.AddSingleton<IElasticClient>(
                 elasticClient => new ElasticClient(ElasticConnectionSettings.GetSettings()));
@@ -47,7 +44,7 @@ namespace SearchApi
 
             app.UseAuthorization();
 
-            app.UseCors("AllowAllOrigin");
+            app.UseCors(c => c.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {
