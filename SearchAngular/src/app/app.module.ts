@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @NgModule({
   declarations: [
