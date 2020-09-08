@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResultService } from 'src/app/services/result.service';
+import { ActivatedRoute } from '@angular/router'; 
 
 @Component({
   selector: 'app-result-page',
@@ -8,9 +9,18 @@ import { ResultService } from 'src/app/services/result.service';
 })
 export class ResultPageComponent implements OnInit {
   public results: string[];
-  constructor(private service: ResultService) { }
+
+  public words: string;
+
+  constructor(private service: ResultService, private activatedRoute: ActivatedRoute) { }
 
   async ngOnInit(): Promise<void> {
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.words = params.get('words');
+      if(this.words){
+        this.searchWord(this.words);
+      }
+    });
   }
 
   public async searchWord(word: string) {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import {ResultPageComponent} from '../result-page.component';
 
 @Component({
@@ -11,7 +11,10 @@ export class ResultPageHeadComponent implements OnInit {
   @Output() searchEvent = new EventEmitter<string>();
   constructor() { }
 
+  @Input() sth;
+
   ngOnInit(): void {
+    console.log(this.sth);
   }
   searchWord(word:string): void {
     this.searchEvent.next(word);

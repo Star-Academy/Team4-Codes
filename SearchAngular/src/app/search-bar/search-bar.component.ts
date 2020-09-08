@@ -9,23 +9,27 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class SearchBarComponent implements OnInit {
   @Input() style: 'dark' | 'light' = 'dark';
+
+  @Input() value;
+
   @Output()
   public searched = new EventEmitter<string>();
   searchIcon = faSearch;
-  public value = '';
+  // public value = '';
 
-  constructor(
-    private router: Router) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
+
+  async ngOnInit(): Promise<void> {
+    // this.value = this.sth;
   }
 
   public onSubmit(): void {
-    if (this.style === 'light')
+
       this.searched.emit(this.value);
-    else{
-      this.router.navigate(['/result']);
-    }
+
+      this.router.navigate(['/result', this.value]);
+    
   }
 
 }

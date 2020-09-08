@@ -5,7 +5,7 @@ import { ResultPageComponent } from './result-page/result-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
-  { path: 'result', component: ResultPageComponent }
+  { path: 'result/:words', component: ResultPageComponent }
 ];
 
 @NgModule({
