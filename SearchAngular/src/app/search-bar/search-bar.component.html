@@ -1,0 +1,10 @@
+<div class="search-bar-wrapper" [ngClass]="style === 'resultPageStyle' ? 'result-search-bar-container':'home-page-search-form-container'">
+    <form id="search-form" (ngSubmit)="onSubmit()">
+        <label>
+            <input type="text" name="search" placeholder="Search..." id="search-bar" value="" [(ngModel)]="value"/>
+        </label>
+        <button type="submit" id="submit-button">
+            <fa-icon [icon] = 'searchIcon' ></fa-icon>
+        </button>
+    </form>
+</div>

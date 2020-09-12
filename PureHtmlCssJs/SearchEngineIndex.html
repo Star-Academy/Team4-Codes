@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Search">
+    <meta name="description" content="Elastic Powered Search Engine">
+    <meta name="author" content="Danial Farahani, Saba Ebrahimi">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home-page.css">
+    <link rel="stylesheet" href="styles/help-popup.css">
+    <link rel="stylesheet" href="styles/search-result-style.css">
+    <title>Search Engine</title>
+</head>
+<body>
+<div>
+    <header class="head-container">
+        <h1 id="home-page-logo">
+            SAT4
+        </h1>
+    </header>
+</div>
+<div class="home-page-search-form-container">
+    <form id="home-page-search-form" method="get" action="ResultPage.html">
+        <label>
+            <input type="text" name="search" placeholder="Search..." id="home-page-search-bar" value=""/>
+        </label>
+        <button type="submit" id="home-page-submit-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</div>
+<div class="footer-container">
+    <footer>
+        <a id="help-popup">How to Search</a>
+        <span>Powered by Elastic Search</span>
+    </footer>
+</div>
+<div id="help-modal" class="modal">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+    </div>
+</div>
+<script src="scripts/helpPopupScript.js"></script>
+<script src="scripts/apiConnections.js"></script>
+
+</body>
+</html>

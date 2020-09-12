@@ -21,6 +21,7 @@ namespace SearchApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            
             services.AddControllers();
             services.AddSingleton<IElasticClient>(
                 elasticClient => new ElasticClient(ElasticConnectionSettings.GetSettings()));
@@ -43,7 +44,7 @@ namespace SearchApi
 
             app.UseAuthorization();
 
-            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(c => c.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {

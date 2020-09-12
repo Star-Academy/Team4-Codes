@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'mathletebulky';
+    src: url('../mathlete/mathlete-bulky-webfont.woff2') format('woff2'),
+         url('../mathlete/mathlete-bulky-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+
+}
+.footer-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: .8rem;
+    width: 100%;
+    background-color: #e2979c;
+}
+.footer-container a{
+    text-decoration: none;
+    color: inherit;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.footer-container a:hover{
+    text-decoration: underline;
+}
+.footer-container footer{
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
